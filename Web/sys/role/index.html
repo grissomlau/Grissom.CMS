@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" 1-content="width=device-width" />
+    <link href="../../1-content/all.css" rel="stylesheet" />
+    <script src="../../1-content/all.js"></script>
+    <script src="../../1-content/comData.js"></script>
+    <script src="viewModel/index.js"></script>
+</head>
+<body>
+    <div id="toolbar" class="dh-toolbar dh-top-toolbar" style="border-bottom: 0px !important;">
+    </div>
+    <div id="__content" style="width:100%">
+        <table data-bind="datagrid:grid" data-options="columns:[[
+       {field:'_cb',checkbox:true,hidden:true,width:100},
+       {field:'Id',title:'角色Id',width:100},
+       {field:'Name',title:'角色名称',width:100},
+       ]]"></table>
+    </div>
+    <div id="foot" style="display:none"></div>
+    <script>
+        $("#foot").load("../../1-content/__gridFoot.html");
+    </script>
+</body>
+</html>

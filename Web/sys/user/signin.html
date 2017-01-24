@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" 1-content="width=device-width" />
+    <link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="../../1-content/all.css" rel="stylesheet" />
+    <script src="../../1-content/all.js"></script>
+    <script src="../../1-content/comData.js"></script>
+    <script src="viewModel/signin.js"></script>
+    <script>
+        var data = {
+            form: { username: "", password: "" },
+            common: {}
+        };
+        viewModel.call(window, data);
+        ko.bindingViewModel();
+    </script>
+    <style>
+        .main {
+            height: 100%;
+            width: 100%;
+        }
+
+        .header {
+            width: 100%;
+            height: 50%;
+            background: #344556;
+        }
+
+        .footer {
+            width: 100%;
+            height: 50%;
+        }
+
+        .dh-form {
+            position: absolute;
+            width: 320px;
+            height: 125px;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: #fff;
+            border: 1px solid #e9eff4;
+            padding: 40px 20px;
+            box-shadow:0px 5px 20px #e9eff4;
+        }
+
+        .button {
+            background: #00c28b;
+            width: 100%;
+            border: 1px solid #e7fcfa;
+            height:30px;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header"></div>
+        <div class="footer"></div>
+    </div>
+    <div class="dh-form">
+        <div class="row">
+            <div class="col1">
+                用户名
+            </div>
+            <div class="col3">
+                <input id="txtAccount" type="text" class="easyui-uc_validatebox" data-bind="value:form.username" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                密码
+            </div>
+            <div class="col3">
+                <input type="password" class="easyui-uc_validatebox" data-bind="value:form.password" />
+            </div>
+        </div>
+        <div class="row" style="margin-top:30px;">
+            <div class="col1"></div>
+            <div class="col3">
+                <input type="button" class="button" value="登录" data-bind="click:signin" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

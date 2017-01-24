@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>视频共享</title>
+    <meta name="viewport" 1-content="width=device-width" />
+    <link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="../1-content/all.css" rel="stylesheet" />
+    <script src="../1-content/all.js"></script>
+    <script src="../1-content/comData.js"></script>
+    <script src="index.js"></script>
+    <script>
+
+        $('#userPic').tooltip({
+            content: $('<div id="userinfo" ><a tag="_changePwd">修改密码</a><a tag="_signout">退出登录</a></div>'),
+            showEvent: 'click',
+            onUpdate: function (content) {
+
+            },
+            position: 'bottom',
+            deltaX: -30,
+            onShow: function () {
+                var t = $(this);
+                t.tooltip('tip').unbind().bind('mouseenter', function () {
+                    t.tooltip('show');
+                }).bind('mouseleave', function () {
+                    t.tooltip('hide');
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="__1-content">
+        <header class="dh-header" id="mainHeader">
+            <div class="dh-center">
+                <a class="dh-logo">
+                    <img style="height: 30px" src="../1-content/images/logo.png" />
+                </a>
+                <!--导航开始-->
+                <!--<div class="header-menu">
+                    <ul id="navul"></ul>
+                </div>-->
+                <div class="header-tool">
+                    <div class="header-user">
+                        <a class="dh-user">
+                            <img class="dh-user" src="../1-content/images/user_default.png" />
+                        </a>
+                        <div class="header-tool-content">
+                            <span class="header-tc-bg"></span>
+                            <span class="header-tc-uname" id="spanName" data-bind="html:common.user.user_name"></span>
+                            <a class="header-tc-changePwd" data-bind="click:_changePwd">修改密码</a>
+                            <a class="header-tc-logout" data-bind="click:_signout">退出登录</a>
+                        </div>
+                    </div>
+                    <!--<div class="header-flowchart"><a class="dh-flowchart"></a></div>
+                    <div class="header-app"><a class="dh-app"></a></div>-->
+                </div>
+            </div>
+        </header>
+        <div class="dh-container" id="mainContainer">
+            <div id="gridLayout" class="easyui-uc_layout" data-options="fit:true">
+                <div data-options="region:'west',split:true,border:true,collapsed:false,title:'菜单'" style="width: 200px; ">
+                    <div id="menu" class="easyui-accordion" style="width:100%;height:100%;border:0;">
+                    </div>
+                </div>
+
+                <div data-options="region:'center',iconCls:'icon-document_table',border:false,split:false">
+                    <div class="easyui-layout" data-options="fit:true">
+                        <div data-options="region:'center',iconCls:'icon-ok',border:false" class="page-content">
+                            <div class="easyui-tabs" data-options="fit:true,border:false,plain:true" id="tabs"
+                                 style="background-color: #C9EAFF">
+                                <div title="Home">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: none">
+            <div data-bind="dialog: __winChangePassword">
+                <div class="dh-form">
+                    <div class="row">
+                        <div class="col2">
+                            旧密码
+                        </div>
+                        <div class="col2">
+                            <input data-bind="value:_formPassword.old_password" type="password" class="easyui-uc_validatebox" data-options="required:true" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col2">
+                            新密码
+                        </div>
+                        <div class="col2">
+                            <input data-bind="value:_formPassword.new_password" type="password" class="easyui-uc_validatebox" data-options="required:true" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="__win" class="easyui-uc_window" data-options="closed:true,modal:true,minimizable:false" style="overflow: hidden">
+        <iframe id="ifr" scrolling="auto" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+    </div>
+    <script>
+        $(function () {
+            $(document.body).on('click', '#userinfo a', function (event) {
+                //if ($(this).attr('tag') === '_signout') {
+                //    _signout();
+                //}
+                window[$(this).attr('tag')]();
+            });
+        }
+        );
+    </script>
+</body>
+</html>

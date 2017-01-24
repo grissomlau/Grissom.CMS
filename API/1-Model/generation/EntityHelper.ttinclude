@@ -1,0 +1,167 @@
+﻿<#@ assembly name="System.Core"#>
+<#@ assembly name="System.Data"#>
+<#@ assembly name="MySql.Data" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="MySql.Data.MySqlClient" #>
+<#+
+    public class EntityHelper
+    {
+        public static List<Entity> GetEntities(string connectionString, List<string> databases)
+        {
+            var list = new List<Entity>();
+            var conn = new MySqlConnection(connectionString);
+            try
+            {
+                conn.Open();		
+                var dbs = string.Join("','", databases.ToArray());
+                var cmd = string.Format(@"SELECT a.`TABLE_SCHEMA`
+                                                    ,a.`TABLE_NAME`
+                                                    ,a.`COLUMN_NAME`
+                                                    ,a.`DATA_TYPE`
+                                                    ,a.`COLUMN_COMMENT`
+                                                    ,a.`IS_NULLABLE`
+                                                    ,a.`COLUMN_KEY`
+													,b.table_comment
+                                                FROM `information_schema`.`COLUMNS` a
+                                                join `information_schema`.`tables` b on b.table_name = a.table_name and  b.`TABLE_SCHEMA` IN ('{0}')
+                                                WHERE a.`TABLE_SCHEMA` IN ('{0}') and a.`table_name` not like 'temp_%' ", dbs) ;
+                using (var reader = MySqlHelper.ExecuteReader(conn, cmd))
+                {
+                    while (reader.Read())
+                    {
+                        var db = reader["TABLE_SCHEMA"].ToString();
+                        var table = reader["TABLE_NAME"].ToString();
+                        var column = reader["COLUMN_NAME"].ToString();
+                        var type =  reader["DATA_TYPE"].ToString();
+                        var comment = reader["COLUMN_COMMENT"].ToString();
+                        var entity = list.FirstOrDefault(x => x.EntityName == table);
+                        bool isNull = reader["IS_NULLABLE"].ToString()=="YES"?true:false;   
+			bool isPk = reader["COLUMN_KEY"].ToString()=="PRI"?true:false;
+                        var tableComment = reader["TABLE_COMMENT"].ToString();
+                        if(entity == null)
+                        {
+                            entity = new Entity(table,tableComment);
+                            entity.Fields.Add(new Field
+                            {
+                                Name = column,
+                                Type = GetCLRType(type),
+                                Comment = comment,
+                                IsNull=isNull,
+				IsPk = isPk
+                            });
+                            
+                            list.Add(entity);
+                        }
+                        else
+                        {
+                            entity.Fields.Add(new Field
+                            {
+                                Name = column,
+                                Type = GetCLRType(type),
+                                Comment = comment,
+                                IsNull=isNull,
+				IsPk = isPk
+                            });
+                        }
+                    }
+                }
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return list;
+        }
+
+        public static string GetCLRType(string dbType)
+        {
+            switch(dbType)
+            {
+                case "bigint":
+                    return "long";
+                case "tinyint":
+                case "smallint":
+                case "mediumint":
+                case "int":
+                case "integer":
+                    return "int";
+                case "double":
+                    return "double";
+                case "float":
+                    return "float";
+                case "decimal":
+                    return "decimal";
+                case "numeric":
+                case "real":
+                    return "decimal";
+                case "bit":
+                    //return "UInt64";
+                    return "bool";
+                case "date":
+                case "time":
+                case "year":
+                case "datetime":
+                case "timestamp":
+                    return "DateTime";
+                case "tinyblob":
+                case "blob":
+                case "mediumblob":
+                case "longblog":
+                case "binary":
+                case "varbinary":
+                    return "byte[]";
+                case "char":
+                case "varchar":                    
+                case "tinytext":
+                case "text":
+                case "mediumtext":
+                case "longtext":
+                    return "string";
+                case "point":
+                case "linestring":
+                case "polygon":
+                case "geometry":
+                case "multipoint":
+                case "multilinestring":
+                case "multipolygon":
+                case "geometrycollection":
+                case "enum":
+                case "set":
+                default:
+                    return dbType;
+            }
+        }
+    }
+
+    public class Entity
+    {
+        public Entity()
+        {
+            this.Fields = new List<Field>();
+        }
+
+        public Entity(string name, string comment)
+            : this()
+        {
+            this.EntityName = name;
+            this.EntityComment = comment;
+        }
+
+        public string EntityComment{get;set;}
+        public string EntityName { get;set; }
+        public List<Field> Fields { get;set; }
+    }
+
+    public class Field
+    {
+        public string Name { get;set; }
+        public string Type { get;set; }
+        public string Comment { get;set; }
+        public bool IsNull{get;set;}
+        public bool IsPk{get;set;}
+    }
+#>

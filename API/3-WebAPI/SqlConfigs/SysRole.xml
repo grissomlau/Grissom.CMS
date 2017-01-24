@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SqlConfig>
+  <Select>
+    main.*
+  </Select>
+  <From>
+    SysRole main
+  </From>
+  <ID>
+    Id
+  </ID>
+  <PKs>Id</PKs>
+  <Where>
+    <Fields>
+      <Field Name="_notDeleted"><![CDATA[ And IsDeleted <> 1]]></Field>
+      <Field Name="Name" Cp="like"></Field>
+    </Fields>
+  </Where>
+  <OrderBy>
+    <Default>Id desc</Default>
+  </OrderBy>
+  <Table>
+    SysRole
+  </Table>
+  <Insert>
+    <Fields>
+      <Field Name="CreatedDate" IsIgnore="true"></Field>
+      <Field Name="UpdatedDate" IsIgnore="true"></Field>
+    </Fields>
+  </Insert>
+  <Update>
+    <Fields>
+    </Fields>
+    <Where>
+      <Fields>
+        <Field Name="Id" Cp="equal"></Field>
+        <Field Name="CreatedDate" IsIgnore="true"></Field>
+        <Field Name="UpdatedDate" IsIgnore="true"></Field>
+      </Fields>
+    </Where>
+  </Update>
+  <Delete>
+    <DeleteAnyway>false</DeleteAnyway>
+    <Where>
+      <Fields>
+        <Field Name="Id" Cp="equal"></Field>
+      </Fields>
+    </Where>
+  </Delete>
+  <SingleQuery>
+    <Where>
+      <Fields>
+        <Field Name="Id" Cp="equal"></Field>
+      </Fields>
+    </Where>
+  </SingleQuery>
+</SqlConfig>

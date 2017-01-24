@@ -1,0 +1,1393 @@
+@charset "UTF-8";
+/* line 5, ../../../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/**
+ * Profound Grid
+ * 
+ * Built in Sass (SCSS) this responsive/adaptive grid supports both fixed and fluid layouts, 
+ * relative and fixed gutters, as well as your choice of semantic markup or generic '.grid-x' classes.
+ * 
+ * The biggest difference to other grid systems is the use of negative margins for column
+ * placements, avoiding the subpixel rounding issues that usually break/uglify fluid layouts
+ * in some browsers.
+ * 
+ * Nested columns are supported too, without having to reset the grid on each level. 
+ *
+ * Credits/Inspiration:
+ * -------------------
+ * Semantic Grid: http://www.semantic.gs
+ * Susy: http://susy.oddbird.net
+ * Negative Grid: http://chrisplaneta.com/freebies/negativegrid-fluid-css-grid-by-chris-planeta/
+ *
+ * @author Profound Creative Studio
+ * @url http://www.profoundgrid.com
+ * @url http://www.weareprofound.com 
+ */
+/**
+ * Clearfix
+ */
+/**
+ * Legacy Clearfix
+ */
+/**
+ * Establish the grid-containing element.
+ */
+/**
+ * Align an element to the grid.
+ */
+/**
+ * Apply to any column to make it the last one of the current row.
+ */
+/* line 28, sass/common.scss */
+html {
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  height: 100%;
+  font-size: 15px !important;
+}
+
+/* line 39, sass/common.scss */
+body {
+  font-family: Arial !important;
+  font-size: 15px !important;
+  background-color: transparent;
+  height: 100%;
+}
+
+/* line 46, sass/common.scss */
+ul {
+  list-style: none;
+}
+
+/*begin signin*/
+/* older 
+.dh-signin-header {
+    background: #fff;
+    background: rgba(255, 255, 255, 0.4);
+    width:550px;
+    padding:25px 40px;
+    margin:15px 1px;
+
+}
+.dh-signin-header span{
+    font-size:21pt;
+    color: #fff;
+}
+.dh-signin-desc{
+    margin:auto;
+    font-size:21pt;
+    width:495px;
+    padding:10px;
+    text-align:center;
+    background:#875868;
+    color:#fff;
+}
+.dh-signin
+{
+    margin:auto;
+    background: url(../images/suncut_base-40.png);
+    width: 495px;
+    height: 377px;
+    margin-top:10px;
+    padding:1px;
+}
+.dh-signin-form{
+    margin:auto;
+    width:155px;
+    margin-top:100px;
+    color:#fff;
+    
+}
+.dh-signin-form div{
+    height:30px;	
+    line-height:30px;	
+    padding:1px;
+}
+.dh-signin-form .dh-signin-btn{
+    text-align:center;
+    vertical-align:midlle;
+    margin:auto;
+    margin-top:10px;
+}
+
+end older*/
+/* line 102, sass/common.scss */
+.dh-signin-header {
+  /*background: #fff;*/
+  line-height: 100px;
+  margin-left: 10%;
+}
+/* line 106, sass/common.scss */
+.dh-signin-header span {
+  vertical-align: bottom;
+  font-size: 21pt;
+  color: #257CA1;
+}
+
+/* line 112, sass/common.scss */
+.dh-signin-container {
+  background: #fff;
+  height: 400px;
+  margin: auto;
+  /*background:url(../images/signin_bg.png);*/
+  opacity: 0.3;
+}
+
+/* line 121, sass/common.scss */
+.dh-signin-title {
+  position: absolute;
+  top: 200px;
+  left: 15%;
+}
+/* line 125, sass/common.scss */
+.dh-signin-title span {
+  vertical-align: bottom;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* line 131, sass/common.scss */
+.dh-signin-form {
+  margin: auto;
+  position: absolute;
+  right: 15%;
+  top: 120px;
+  opacity: 1 !important;
+  height: 300px;
+  width: 350px;
+  float: right;
+  background: none;
+  background-color: white;
+  border: 2px solid #E6E6E6;
+}
+/* line 143, sass/common.scss */
+.dh-signin-form .dh-signin-form-cell {
+  margin-left: 55px;
+  margin-right: 55px;
+}
+/* line 146, sass/common.scss */
+.dh-signin-form .dh-signin-form-cell input {
+  color: #111 !important;
+}
+/* line 149, sass/common.scss */
+.dh-signin-form .dh-signin-form-cell .dh-signin-btn {
+  vertical-align: midlle;
+  background-color: #007ACC;
+  border: 1px solid #007ACC;
+  color: white;
+  line-height: 30px;
+  display: inline-block;
+  text-decoration: none;
+  padding-right: 18px;
+  padding-left: 18px;
+  width: 50px;
+  text-align: center;
+}
+/* line 162, sass/common.scss */
+.dh-signin-form .dh-signin-form-cell .dh-signin-btn:hover {
+  background-color: #248BD1;
+}
+/* line 165, sass/common.scss */
+.dh-signin-form .dh-signin-form-cell .dh-signin-language {
+  color: #9B9B9B;
+}
+/* line 167, sass/common.scss */
+.dh-signin-form .dh-signin-form-cell .dh-signin-language span {
+  padding: 5px;
+  cursor: pointer;
+}
+/* line 173, sass/common.scss */
+.dh-signin-form .dh-signin-form-cell .dh-signin-message {
+  color: black;
+  background-color: #F9F5C7;
+  display: block;
+  border: 1px solid #DAD699;
+  max-height: 100px;
+  text-overflow: ellipsis;
+}
+/* line 185, sass/common.scss */
+.dh-signin-form .dh-please-signin {
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 16px !important;
+}
+
+/*end signin*/
+/*begin header*/
+/* line 198, sass/common.scss */
+.dh-header {
+  /*background: url(../images/header_banner.jpg) repeat;*/
+  background-color: #344556;
+  /*background-color:#3B749D $imp;*/
+}
+/* line 202, sass/common.scss */
+.dh-header .dh-center {
+  /*margin-left:68px;
+  margin-right:68px;
+  */
+  margin: auto;
+  max-width: 90%;
+  min-width: 700px;
+  height: 40px;
+}
+/* line 210, sass/common.scss */
+.dh-header .dh-center .dh-logo {
+  color: white;
+  /*width: 150px;*/
+  height: 30px;
+  float: left;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 20px !important;
+}
+/* line 219, sass/common.scss */
+.dh-header .dh-center a.dh-logo {
+  margin: 3px;
+  border: 2px solid white;
+}
+/* line 223, sass/common.scss */
+.dh-header .dh-center .header-menu {
+  color: white;
+}
+/* line 226, sass/common.scss */
+.dh-header .dh-center .header-menu #navul > li {
+  background-color: #3fc1f3;
+  float: left;
+  min-width: 80px;
+  height: 40px;
+  position: relative;
+  text-align: left;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 15px !important;
+}
+/* line 236, sass/common.scss */
+.dh-header .dh-center .header-menu #navul > li > a {
+  padding: 10px;
+}
+/* line 239, sass/common.scss */
+.dh-header .dh-center .header-menu #navul > li a:link, .dh-header .dh-center .header-menu #navul > li a:visited {
+  color: #FFF;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+/* line 244, sass/common.scss */
+.dh-header .dh-center .header-menu #navul > li ul {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  background: white;
+  border: #E6E6E6 1px solid;
+  border-top: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 178px;
+  /*border-bottom: none;*/
+  left: -1px;
+}
+/* line 256, sass/common.scss */
+.dh-header .dh-center .header-menu #navul > li ul li {
+  display: block;
+  float: none;
+  height: 35px;
+  position: relative;
+  line-height: 35px;
+  /*border-bottom: #8BB9B7 1px solid;*/
+  font-size: 12px;
+  overflow: hidden;
+  width: 178px;
+  vertical-align: middle;
+  text-align: left;
+}
+/* line 273, sass/common.scss */
+.dh-header .dh-center .header-menu #navul > li.navmoon {
+  background: #24CBFC;
+  border: #24CBFC 1px solid;
+  height: 38px;
+  line-height: 38px;
+}
+/* line 278, sass/common.scss */
+.dh-header .dh-center .header-menu #navul > li.navmoon a {
+  /*color: #404a58;*/
+}
+/* line 282, sass/common.scss */
+.dh-header .dh-center .header-menu #navul > li.navmoon ul li {
+  width: 178px;
+  text-align: left;
+}
+/* line 287, sass/common.scss */
+.dh-header .dh-center .header-menu #navul > li.navmoon ul a {
+  display: block;
+  width: 178px;
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+  color: #404a58;
+  display: block;
+  width: 178px;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 10px;
+}
+/* line 300, sass/common.scss */
+.dh-header .dh-center .header-menu #navul > li.navmoon ul a:hover {
+  color: white;
+  background: #E8380D;
+  cursor: default;
+}
+/* line 309, sass/common.scss */
+.dh-header .dh-center .header-search {
+  float: right;
+  margin-top: 10px;
+}
+/* line 313, sass/common.scss */
+.dh-header .dh-center .header-tool {
+  float: right;
+  /*2015-09-02*/
+  /*width:200px;*/
+  width: 80px;
+}
+/* line 318, sass/common.scss */
+.dh-header .dh-center .header-tool > div {
+  width: 98%;
+  margin: 0 1%;
+  position: relative;
+  height: 40px;
+  float: right;
+  padding-top: 5px;
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin-right: 10px;
+}
+/* line 328, sass/common.scss */
+.dh-header .dh-center .header-tool > div li {
+  float: right;
+  margin-top: 5px;
+}
+/* line 332, sass/common.scss */
+.dh-header .dh-center .header-tool > div > a {
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  opacity: 0.5;
+  -moz-transition: ease-out 0.3s;
+  -o-transition: ease-out 0.3s;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+/* line 339, sass/common.scss */
+.dh-header .dh-center .header-tool > div > a:hover {
+  opacity: 1;
+}
+/* line 342, sass/common.scss */
+.dh-header .dh-center .header-tool > div a.dh-flowchart {
+  background: url("../images/icons-top1/flowchart.png") no-repeat;
+}
+/* line 347, sass/common.scss */
+.dh-header .dh-center .header-tool > div a.dh-news {
+  background: url("../images/icons-top1/news.png") no-repeat;
+}
+/* line 352, sass/common.scss */
+.dh-header .dh-center .header-tool > div a.dh-app {
+  background: url("../images/icons-top1/app.png") no-repeat;
+}
+/* line 357, sass/common.scss */
+.dh-header .dh-center .header-tool > div a.dh-user {
+  background-color: white;
+  margin-top: -2px;
+  opacity: 1;
+}
+/* line 361, sass/common.scss */
+.dh-header .dh-center .header-tool > div a.dh-user img {
+  width: 25px;
+  height: 25px;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
+/* line 375, sass/common.scss */
+.header-news .header-tool-content {
+  width: 300px;
+  padding: 0 26px;
+}
+
+/* line 380, sass/common.scss */
+.header-user {
+  margin-right: 0px !important;
+}
+
+/* line 384, sass/common.scss */
+.header-search input {
+  /*	background-color: #31C9FA;
+  	border-color: #1FADDB!important;
+  	*/
+}
+/* line 390, sass/common.scss */
+.header-search .searchbox {
+  background-color: transparent;
+}
+/* line 394, sass/common.scss */
+.header-search input:focus {
+  background-color: white;
+  /*border-color: #557171!important;*/
+}
+
+/* line 401, sass/common.scss */
+.onHover {
+  display: block !important;
+}
+
+/* line 404, sass/common.scss */
+.header-tc-bg {
+  display: block;
+  position: absolute;
+  z-index: 99999;
+  top: -8px;
+  width: 0px;
+  height: 0px;
+  right: 1px;
+  margin-right: 10px;
+  border: 4px solid white;
+  border-color: transparent transparent #fff;
+}
+
+/* line 416, sass/common.scss */
+.header-tool-content {
+  display: none;
+  position: absolute;
+  z-index: 99999;
+  right: -1px;
+  border: 1px solid #E6E6E6;
+  width: 166px;
+  top: 40px;
+  background-color: white;
+  margin-right: 5%;
+  /*box-shadow: 0 0 6px rgba(0,0,0,.19);*/
+}
+
+/* line 428, sass/common.scss */
+.header-tc-uname {
+  display: block;
+  margin: 0 24px;
+  margin-top: 0px;
+  margin-right: 24px;
+  margin-bottom: 0px;
+  margin-left: 24px;
+  font-size: 14px;
+  line-height: 42px;
+  color: #969696;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+/* line 440, sass/common.scss */
+.header-tc-changePwd {
+  display: block;
+  margin: 0 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  color: #454545;
+  line-height: 42px;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+/* line 451, sass/common.scss */
+.header-tc-logout {
+  display: block;
+  margin: 0 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  color: #454545;
+  line-height: 42px;
+}
+
+/* line 461, sass/common.scss */
+.news-title {
+  line-height: 42px;
+  border-bottom: 1px solid #E6E6E6;
+  overflow: hidden;
+}
+/* line 465, sass/common.scss */
+.news-title .news-title-ctx {
+  color: #969696;
+  font-size: 14px;
+  float: left;
+}
+
+/* line 471, sass/common.scss */
+.news-empty {
+  width: 140px;
+  height: 84px;
+  background: url(../images/news_icon.png) 36px -200px no-repeat;
+  padding-top: 100px;
+  text-align: center;
+  color: #D8D8D8;
+  font-size: 14px;
+  margin: 0 auto;
+}
+
+/* line 481, sass/common.scss */
+.news-bottom {
+  height: 42px;
+  line-height: 42px;
+  vertical-align: middel;
+  text-align: center;
+  border-top: 1px solid #E0E6F1;
+}
+
+/* line 491, sass/common.scss */
+#userinfo a {
+  width: 125px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+}
+/* line 499, sass/common.scss */
+#userinfo a:hover {
+  background-color: gray;
+}
+
+/*end header*/
+/*begin container*/
+/* line 506, sass/common.scss */
+.dh-container {
+  width: 100%;
+  font-size: 15px !important;
+}
+
+/* line 510, sass/common.scss */
+.layout-split-west {
+  border-color: transparent !important;
+}
+
+/* line 514, sass/common.scss */
+.layout-panel .panel-header {
+  /*background: url('../images/header_bar.png') $imp;*/
+  border-width: 0px !important;
+}
+/* line 518, sass/common.scss */
+.layout-panel .panel-title {
+  /*color:white $imp;*/
+}
+
+/* line 524, sass/common.scss */
+#nav {
+  background-color: #E0E6E5 !important;
+}
+
+/*end container*/
+/*begin menu_container*/
+/* line 531, sass/common.scss */
+#nav > div {
+  overflow-y: auto;
+}
+/* line 534, sass/common.scss */
+#nav #menu_container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 70%;
+  min-height: 100px;
+  padding-top: 10px;
+}
+/* line 540, sass/common.scss */
+#nav #menu_container div[data-options] {
+  padding-left: 10px;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  cursor: pointer;
+  -moz-transition: background-color 0.3s ease-in, margin-top 0.1s ease-out;
+  -o-transition: background-color 0.3s ease-in, margin-top 0.1s ease-out;
+  -webkit-transition: background-color 0.3s ease-in, margin-top 0.1s ease-out;
+  transition: background-color 0.3s ease-in, margin-top 0.1s ease-out;
+}
+/* line 548, sass/common.scss */
+#nav #menu_container div[data-options]:hover {
+  background-color: gray;
+}
+/* line 551, sass/common.scss */
+#nav #menu_container div[data-options] {
+  overflow: hidden;
+  width: 200px;
+}
+/* line 556, sass/common.scss */
+#nav #menu_draft {
+  height: 9%;
+  padding: 0px 20px;
+  min-height: 25px;
+}
+/* line 560, sass/common.scss */
+#nav #menu_draft div {
+  border-top: 2px solid #BBC0BF;
+}
+/* line 562, sass/common.scss */
+#nav #menu_draft div a {
+  width: 100%;
+  display: block;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  vertical-align: middle;
+}
+/* line 572, sass/common.scss */
+#nav #im_contact {
+  min-height: 20px;
+  height: 19%;
+}
+
+/* line 577, sass/common.scss */
+.dh-fixedform {
+  width: 960px;
+}
+
+/* line 583, sass/common.scss */
+.dh-form .row, .dh-form .fixedrow {
+  padding: 2px 0px;
+  overflow: hidden;
+}
+/* line 587, sass/common.scss */
+.dh-form .row .col0, .dh-form .fixedrow .col0 {
+  text-align: left;
+  vertical-align: middle;
+  min-height: 24px;
+  line-height: 24px;
+}
+/* line 587, sass/common.scss */
+.dh-form .row .col1, .dh-form .fixedrow .col1 {
+  text-align: left;
+  vertical-align: middle;
+  min-height: 24px;
+  line-height: 24px;
+}
+/* line 587, sass/common.scss */
+.dh-form .row .col2, .dh-form .fixedrow .col2 {
+  text-align: left;
+  vertical-align: middle;
+  min-height: 24px;
+  line-height: 24px;
+}
+/* line 587, sass/common.scss */
+.dh-form .row .col3, .dh-form .fixedrow .col3 {
+  text-align: left;
+  vertical-align: middle;
+  min-height: 24px;
+  line-height: 24px;
+}
+/* line 587, sass/common.scss */
+.dh-form .row .col4, .dh-form .fixedrow .col4 {
+  text-align: left;
+  vertical-align: middle;
+  min-height: 24px;
+  line-height: 24px;
+}
+/* line 587, sass/common.scss */
+.dh-form .row .col5, .dh-form .fixedrow .col5 {
+  text-align: left;
+  vertical-align: middle;
+  min-height: 24px;
+  line-height: 24px;
+}
+/* line 587, sass/common.scss */
+.dh-form .row .col6, .dh-form .fixedrow .col6 {
+  text-align: left;
+  vertical-align: middle;
+  min-height: 24px;
+  line-height: 24px;
+}
+/* line 587, sass/common.scss */
+.dh-form .row .col7, .dh-form .fixedrow .col7 {
+  text-align: left;
+  vertical-align: middle;
+  min-height: 24px;
+  line-height: 24px;
+}
+/* line 587, sass/common.scss */
+.dh-form .row .col8, .dh-form .fixedrow .col8 {
+  text-align: left;
+  vertical-align: middle;
+  min-height: 24px;
+  line-height: 24px;
+}
+/* line 587, sass/common.scss */
+.dh-form .row .col9, .dh-form .fixedrow .col9 {
+  text-align: left;
+  vertical-align: middle;
+  min-height: 24px;
+  line-height: 24px;
+}
+/* line 587, sass/common.scss */
+.dh-form .row .col10, .dh-form .fixedrow .col10 {
+  text-align: left;
+  vertical-align: middle;
+  min-height: 24px;
+  line-height: 24px;
+}
+/* line 587, sass/common.scss */
+.dh-form .row .col11, .dh-form .fixedrow .col11 {
+  text-align: left;
+  vertical-align: middle;
+  min-height: 24px;
+  line-height: 24px;
+}
+/* line 587, sass/common.scss */
+.dh-form .row .col12, .dh-form .fixedrow .col12 {
+  text-align: left;
+  vertical-align: middle;
+  min-height: 24px;
+  line-height: 24px;
+}
+/* line 602, sass/common.scss */
+.dh-form > table.dh-group {
+  margin-top: -5px;
+}
+/* line 605, sass/common.scss */
+.dh-form div.dh-group {
+  border: 1px solid #ccc;
+}
+/* line 608, sass/common.scss */
+.dh-form fieldset.dh-group {
+  border: 1px solid #ccc;
+}
+/* line 610, sass/common.scss */
+.dh-form fieldset.dh-group legend {
+  font-weight: bold;
+  margin-left: 10px;
+}
+/* line 616, sass/common.scss */
+.dh-form table.dh-group {
+  width: 100%;
+  height: 100%;
+}
+/* line 621, sass/common.scss */
+.dh-form table.dh-group > tbody > tr > td {
+  border: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 5px;
+}
+/* line 633, sass/common.scss */
+.dh-form table.dh-noborder > tbody > tr > td {
+  border: 0px;
+}
+/* line 643, sass/common.scss */
+.dh-form table.dh-border-l > tbody > tr > td {
+  border: 0px;
+  border-right: 1px solid #ccc;
+}
+
+/* line 652, sass/common.scss */
+.dh-minwidth {
+  min-width: 1050px;
+}
+
+/* line 657, sass/common.scss */
+.dh-form-print input, .dh-form-print textarea {
+  border: 0px !important;
+  border-bottom: 1px solid !important;
+  box-shadow: none !important;
+  -wekit-box-shadow: none !important;
+}
+
+/* line 664, sass/common.scss */
+.dh-form-win {
+  width: 100% !important;
+  overflow-x: hidden;
+}
+/* line 665, sass/common.scss */
+.dh-form-win .row, .dh-form-win .dh-form .fixedrow, .dh-form .dh-form-win .fixedrow {
+  overflow-x: hidden;
+  width: 100% !important;
+}
+
+/* line 673, sass/common.scss */
+.dh-border-r {
+  border-right: 1px solid #ccc;
+}
+
+/* line 676, sass/common.scss */
+.dh-border-b {
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 679, sass/common.scss */
+.dh-border-top {
+  border-top: 1px solid #ccc;
+}
+
+/*end menu_container*/
+/*begin table chain*/
+/* line 686, sass/common.scss */
+.dh-btn-chain {
+  border-collapse: collapse;
+}
+
+/* line 690, sass/common.scss */
+.dh-btn-chain td {
+  border: 1px solid gray !important;
+  border-bottom: 0px !important;
+  padding: 5px 10px 5px 10px;
+  cursor: default;
+}
+
+/* line 697, sass/common.scss */
+.dh-btn-chain td:hover {
+  background-color: #D3D3D3;
+}
+
+/* line 700, sass/common.scss */
+.dh-btn-chain-selected {
+  background-color: #C0C0C0;
+}
+
+/*end table chain*/
+/* line 707, sass/common.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font-size: 13px !important;
+}
+
+/*toolbar*/
+/* line 712, sass/common.scss */
+.dh-toolbar, .dialog-button {
+  padding: 5px;
+  background: #F5F5F5;
+}
+/* line 713, sass/common.scss */
+.dh-toolbar > div, .dialog-button > div {
+  text-align: right;
+  /*padding: 5px;*/
+}
+/* line 719, sass/common.scss */
+.dh-toolbar a.dh-menu-point, .dialog-button a.dh-menu-point {
+  margin-right: 10px;
+}
+/* line 722, sass/common.scss */
+.dh-toolbar a.l-btn, .dialog-button a.l-btn {
+  padding-right: 5px !important;
+  border: 0 !important;
+  padding: 1px 6px 1px 1px !important;
+}
+/* line 727, sass/common.scss */
+.dh-toolbar a.l-btn span.l-btn-left, .dialog-button a.l-btn span.l-btn-left {
+  padding-left: 5px !important;
+}
+/* line 731, sass/common.scss */
+.dh-toolbar a:hover.l-btn, .dialog-button a:hover.l-btn {
+  padding: 0 5px 0 0 !important;
+}
+/* line 736, sass/common.scss */
+.dh-toolbar a.l-btn,
+.dh-toolbar a.l-btn span.l-btn-left, .dialog-button a.l-btn,
+.dialog-button a.l-btn span.l-btn-left {
+  background: transparent !important;
+  border: 0 !important;
+  filter: none !important;
+}
+/* line 742, sass/common.scss */
+.dh-toolbar a:hover.l-btn, .dialog-button a:hover.l-btn {
+  background: #e6e6e6 !important;
+  color: #00438a !important;
+  border: 1px solid #ddd !important;
+  -moz-border-radius: 5px 5px 5px 5px !important;
+  -webkit-border-radius: 5px 5px 5px 5px !important;
+  border-radius: 5px 5px 5px 5px !important;
+}
+/* line 751, sass/common.scss */
+.dh-toolbar a.l-btn-disabled,
+.dh-toolbar a:hover.l-btn-disabled, .dialog-button a.l-btn-disabled,
+.dialog-button a:hover.l-btn-disabled {
+  background: transparent !important;
+  filter: alpha(opacity=50) !important;
+}
+/* line 757, sass/common.scss */
+.dh-toolbar a.l-btn-selected,
+.dh-toolbar a:hover.l-btn-selected, .dialog-button a.l-btn-selected,
+.dialog-button a:hover.l-btn-selected {
+  background: #ddd !important;
+}
+
+/* line 762, sass/common.scss */
+.dh-top-toolbar {
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+/* line 767, sass/common.scss */
+.dh-bottom-toolbar {
+  position: fixed;
+  bottom: 0;
+  border: 0;
+  border-top: 1px solid #D4D4D4;
+  width: 100%;
+  text-align: left;
+  z-index: 9000;
+}
+
+/* line 776, sass/common.scss */
+.dh-topToolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* line 781, sass/common.scss */
+.dh-win-toolbar {
+  border-top: 1px solid #D4D4D4;
+  height: 32px;
+  padding: 2px;
+}
+
+/*end toolbar*/
+/*easyui*/
+/* line 790, sass/common.scss */
+.easyui-uc_validatebox {
+  height: 22px;
+}
+
+/* line 794, sass/common.scss */
+.combo-search {
+  background: url("../images/combo_search.png") no-repeat center center;
+}
+
+/* line 797, sass/common.scss */
+.easyui-uc_listbox {
+  display: none;
+}
+
+/* line 800, sass/common.scss */
+.easyui-uc_checkboxs {
+  display: none;
+}
+
+/* line 804, sass/common.scss */
+.dh-checkboxs {
+  /*display:inline-block;*/
+  vertical-align: bottom;
+}
+/* line 807, sass/common.scss */
+.dh-checkboxs label {
+  margin: 0px;
+}
+
+/* line 811, sass/common.scss */
+.dh-checkboxs-list-h {
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: bottom;
+}
+/* line 815, sass/common.scss */
+.dh-checkboxs-list-h li {
+  float: left;
+  height: 24px !important;
+  vertical-align: bottom;
+}
+/* line 819, sass/common.scss */
+.dh-checkboxs-list-h li input {
+  margin: 0px 5px !important;
+}
+
+/* line 824, sass/common.scss */
+.dh-checkboxs-list-v {
+  display: inline-table;
+  list-style-type: none;
+}
+/* line 827, sass/common.scss */
+.dh-checkboxs-list-v li {
+  height: 24px !important;
+  vertical-align: bottom;
+}
+/* line 830, sass/common.scss */
+.dh-checkboxs-list-v li input {
+  margin: 0px 5px !important;
+}
+
+/* line 836, sass/common.scss */
+.easyui-uc_radioGroup {
+  display: none;
+}
+
+/* line 840, sass/common.scss */
+.dh-radioGroup label {
+  margin: 5px;
+}
+
+/* line 844, sass/common.scss */
+.dh-radio-list-h {
+  display: inline-flex;
+  list-style-type: none;
+}
+/* line 847, sass/common.scss */
+.dh-radio-list-h li {
+  float: left;
+}
+
+/* line 851, sass/common.scss */
+.dh-radio-list-v {
+  display: inline-table;
+  list-style-type: none;
+}
+
+/* line 861, sass/common.scss */
+.dh-link {
+  text-decoration: underline;
+  color: blue;
+}
+
+/* line 874, sass/common.scss */
+.dh-tools a {
+  margin-left: 2px;
+}
+
+/* line 877, sass/common.scss */
+.dh-l-btn {
+  line-height: 24px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0px !important;
+}
+
+/* line 885, sass/common.scss */
+.dh-icon {
+  display: table-cell;
+  width: 20px;
+  height: 24px;
+}
+
+/*end easyui*/
+/*msg*/
+/* line 893, sass/common.scss */
+.dh-showmsg {
+  min-width: 200px;
+  padding: 5px;
+  top: 10px;
+  z-index: 9999;
+  border: 1px solid pink;
+  position: absolute;
+  background-color: pink;
+  border-radius: 5px;
+}
+/* line 902, sass/common.scss */
+.dh-showmsg div {
+  min-width: 16px;
+  height: 20px;
+}
+
+/* line 907, sass/common.scss */
+.dh-note {
+  padding: 5px;
+  color: blue;
+}
+
+/* line 911, sass/common.scss */
+.dh-pickbox-toolbar {
+  padding: 2px;
+}
+/* line 913, sass/common.scss */
+.dh-pickbox-toolbar > div:nth-child(1) {
+  display: inline-block;
+  float: left;
+}
+/* line 917, sass/common.scss */
+.dh-pickbox-toolbar > div:nth-child(2) {
+  display: inline-block;
+  float: right;
+}
+
+/* line 923, sass/common.scss */
+.dh-row-text-right div {
+  text-align: right !important;
+}
+
+/* line 929, sass/common.scss */
+.dh-title-large {
+  font-size: 20px !important;
+}
+/* line 931, sass/common.scss */
+.dh-title-large span, .dh-title-large label {
+  font-size: 20px !important;
+}
+
+/* line 935, sass/common.scss */
+.dh-title-middle {
+  font-size: 19px !important;
+}
+/* line 937, sass/common.scss */
+.dh-title-middle span, .dh-title-middle label {
+  font-size: 19px !important;
+}
+
+/* line 941, sass/common.scss */
+.dh-title-normal {
+  font-weight: bold;
+}
+/* line 944, sass/common.scss */
+.dh-title-normal span, .dh-title-normal label {
+  font-weight: bold;
+}
+
+/* line 950, sass/common.scss */
+.dh-appform-title {
+  color: white;
+  background: #808080;
+  width: 300px;
+}
+
+/* line 956, sass/common.scss */
+.dh-appform-group {
+  padding: 1px 0px !important;
+}
+
+/* line 959, sass/common.scss */
+.dh-label-title {
+  font-weight: bold;
+}
+
+/* line 962, sass/common.scss */
+.dh-label2-title {
+  font-weight: bold;
+}
+
+/* line 965, sass/common.scss */
+.dh-label-title-approval {
+  color: blue;
+  border: 1px solid blue;
+  cursor: pointer;
+}
+
+/* line 970, sass/common.scss */
+.dh-colon {
+  float: right;
+}
+
+/* line 974, sass/common.scss */
+.dh-pick {
+  background: url("../images/combo_search.png") no-repeat center center;
+  width: 18px;
+  height: 20px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  opacity: 0.6;
+  height: 22px;
+  border: 1px solid #ccc;
+}
+
+/* line 987, sass/common.scss */
+span.dh-title {
+  padding-right: 20px;
+  font-weight: bolder;
+}
+
+/* line 993, sass/common.scss */
+.dh-menu-point {
+  line-height: 25px;
+  display: inline-block;
+  text-decoration: none;
+  color: #444;
+  margin: 0;
+}
+/* line 1000, sass/common.scss */
+.dh-menu-point span {
+  opacity: 1;
+  -moz-transition: ease-out 0.3s;
+  -o-transition: ease-out 0.3s;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+/* line 1004, sass/common.scss */
+.dh-menu-point span:hover {
+  opacity: 0.8;
+}
+/* line 1007, sass/common.scss */
+.dh-menu-point span.dh-point {
+  line-height: 25px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  /*border: 1px solid;*/
+}
+/* line 1017, sass/common.scss */
+.dh-menu-point span.dh-point span.dh-icon {
+  width: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 1022, sass/common.scss */
+.dh-menu-point span.dh-point span.dh-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 1028, sass/common.scss */
+.dh-direction {
+  display: inline-block;
+  border-bottom: 1px solid #CCCCCC;
+  width: 100%;
+  line-height: 28px;
+}
+/* line 1033, sass/common.scss */
+.dh-direction a {
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+  text-decoration: none;
+  color: gray;
+  cursor: default;
+}
+/* line 1041, sass/common.scss */
+.dh-direction span {
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+  line-height: 20px;
+  height: 25px;
+  width: 25px;
+  vertical-align: middle;
+}
+/* line 1050, sass/common.scss */
+.dh-direction .dh-nav-arrow {
+  background: url("../images/arrow_right.png") no-repeat center;
+}
+/* line 1053, sass/common.scss */
+.dh-direction .dh-alive {
+  color: #000 !important;
+}
+/* line 1056, sass/common.scss */
+.dh-direction .dh-current {
+  font-weight: bold;
+  cursor: default !important;
+  text-decoration: none !important;
+  color: #000 !important;
+  background-color: #FFFF00;
+}
+/* line 1063, sass/common.scss */
+.dh-direction a.dh-alive:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* line 1068, sass/common.scss */
+.dh-existing {
+  background-color: #FFFF00;
+}
+
+/* line 1071, sass/common.scss */
+.dh-new {
+  background-color: #00FFFF;
+}
+
+/***********************回到顶部***************************/
+/*backtoTop*/
+/* line 1077, sass/common.scss */
+.backtoTop {
+  clear: both;
+  height: 60px !important;
+  width: 40px;
+  position: absolute;
+  right: 20px !important;
+  /*z-index: 9999;*/
+  /*避免闪烁*/
+  -moz-transition: all .6s ease;
+  -webkit-transition: all .6s ease;
+  -o-transition: all .6s ease;
+  transition: all .6s ease;
+  /*避免闪烁*/
+  border-radius: 5px;
+  overflow: hidden;
+  background: #f5f5f5;
+  font-size: 30px !important;
+  cursor: pointer;
+  text-align: center;
+  color: #9c9c9c;
+}
+
+/*up-back*/
+/* line 1099, sass/common.scss */
+.up-back {
+  background: #ECF0F1;
+}
+
+/* line 1102, sass/common.scss */
+.down-back {
+  background: #BDC3C7;
+  color: #fff;
+}

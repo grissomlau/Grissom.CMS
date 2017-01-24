@@ -1,0 +1,365 @@
+.icon-blank {
+    background: url('icons/blank.gif') no-repeat center center;
+}
+
+.icon-add {
+    background: url('icons/edit_add.png') no-repeat center center;
+}
+
+.icon-edit {
+    background: url('icons/pencil.png') no-repeat center center;
+}
+
+.icon-remove {
+    background: url('icons/edit_remove.png') no-repeat center center;
+}
+
+.icon-save {
+    background: url('icons/filesave.png') no-repeat center center;
+}
+.icon-newVersion {
+    background: url('icons/filesave.png') no-repeat center center;
+}
+
+
+.icon-cut {
+    background: url('icons/cut.png') no-repeat center center;
+}
+
+.icon-insert {
+    background: url('icons/edit_add.png') no-repeat center center;
+}
+
+.icon-ok {
+    background: url('icons/ok.png') no-repeat center center;
+}
+
+.icon-no {
+    background: url('icons/no.png') no-repeat center center;
+}
+
+.icon-cancel {
+    background: url('icons/cancel.png') no-repeat center center;
+}
+
+.icon-reload {
+    background: url('icons/reload.png') no-repeat center center;
+}
+
+.icon-search {
+    background: url('icons/search.png') no-repeat center center;
+}
+
+.icon-query {
+    background: url('icons/search.png') no-repeat center center;
+}
+
+.icon-changePassword {
+    background: url('icons/change_password.png') no-repeat center center;
+}
+
+.icon-print {
+    background: url('icons/print.png') no-repeat center center;
+}
+
+.icon-man {
+    background: url('icons/man.png') no-repeat center center;
+}
+
+.icon-lock {
+    background: url('icons/lock.png') no-repeat center center;
+}
+
+.icon-help {
+    background: url('icons/help.png') no-repeat center center;
+}
+
+.icon-undo {
+    background: url('icons/undo.png') no-repeat center center;
+}
+
+.icon-redo {
+    background: url('icons/redo.png') no-repeat center center;
+}
+
+.icon-back {
+    background: url('icons/back.png') no-repeat center center;
+}
+
+.icon-sum {
+    background: url('icons/sum.png') no-repeat center center;
+}
+
+.icon-tip {
+    background: url('icons/tip.png') no-repeat center center;
+}
+
+.icon-mini-add {
+    background: url('icons/mini_add.png') no-repeat center center;
+}
+
+.icon-mini-edit {
+    background: url('icons/mini_edit.png') no-repeat center center;
+}
+
+.icon-mini-refresh {
+    background: url('icons/mini_refresh.png') no-repeat center center;
+}
+
+.icon-export {
+    background: url('icons/icon_excel.png') no-repeat center center;
+}
+
+.icon-role_mgt {
+    background: url('icons/role.png') no-repeat center center;
+}
+
+.icon-user_mgt {
+    background: url('icons/user.png') no-repeat center center;
+}
+
+.icon-search {
+    background: url('icons/search.png') no-repeat center center;
+}
+
+.icon-check {
+    background: url('icons/check-circle.png') no-repeat center center;
+}
+
+.icon-success {
+    background: url('icons/check-circle.png') no-repeat center center;
+}
+
+.icon-close {
+    background: url('icons/close.png') no-repeat center center;
+}
+
+.icon-information {
+    background: url('icons/information.png') no-repeat center center;
+}
+
+.icon-delete {
+    background: url('icons/delete.png') no-repeat center center;
+}
+
+.icon-warn {
+    background: url('icons/warn.png') no-repeat center center;
+}
+
+.icon-handoverCon {
+    background: url('icons/menus/handoverCon.png') no-repeat center center;
+}
+
+.icon-agency {
+    background: url('icons/menus/agency.png') no-repeat center center;
+}
+
+.icon-unit {
+    background: url('icons/menus/unit.png') no-repeat center center;
+}
+
+.icon-features {
+    background: url('icons/menus/features.png') no-repeat center center;
+}
+
+.icon-addGuarantee {
+    background: url('icons/menus/features.png') no-repeat center center;
+}
+
+.icon-busNature {
+    background: url('icons/menus/busNature.png') no-repeat center center;
+}
+
+.icon-rental_application {
+    background: url('icons/menus/rental_application.png') no-repeat center center;
+}
+
+.icon-rental_app_form_office {
+    background: url('icons/menus/rental_app_office.png') no-repeat center center;
+}
+
+.icon-rental_app_form_retail {
+    background: url('icons/menus/rental_app_retail.png') no-repeat center center;
+}
+
+.icon-rental_app_form_ge {
+    background: url('icons/menus/rental_app_ge.png') no-repeat center center;
+}
+
+.icon-rental_app_form_bw {
+    background: url('icons/menus/rental_app_bw.png') no-repeat center center;
+}
+
+.icon-rental_app_form_signage {
+    background: url('icons/menus/rental_app_signage.png') no-repeat center center;
+}
+
+.icon-addGuarantee {
+    background: url('icons/menus/addGuarantee.png') no-repeat center center;
+}
+
+.icon-landlordProv {
+    background: url('icons/menus/LandlordProv.png') no-repeat center center;
+}
+/* tool's' icon*/
+.icon-detail {
+    background: url('icons/detail.png') no-repeat center center;
+}
+
+.icon-import {
+    background: url('icons/import.png') no-repeat center center;
+}
+
+/*msg icon*/
+.icon-error {
+    background: url('icons/error.png') no-repeat center center;
+}
+
+.icon-download {
+    background: url('icons/drive-download.png') no-repeat center center;
+}
+
+.icon-upload {
+    background: url('icons/drive-upload.png') no-repeat center center;
+}
+
+.icon-refresh {
+    background: url('icons/reload.png') no-repeat center center;
+}
+
+.icon-approve {
+    background: url('icons/thumb-up.png') no-repeat center center;
+}
+
+.icon-disapprove {
+    background: url('icons/thumb.png') no-repeat center center;
+}
+
+.icon-reject {
+    background: url('icons/thumb.png') no-repeat center center;
+}
+
+.icon-submit {
+    background: url('icons/disk_multiple.png') no-repeat center center;
+}
+
+.icon-approver {
+    background: url('icons/user.png') no-repeat center center;
+}
+
+.icon-history {
+    background: url('icons/application_from_storage.png') no-repeat center center;
+}
+
+.icon-split {
+    background: url('icons/application_cascade.png') no-repeat center center;
+}
+
+.icon-notes {
+    background: url('icons/note_edit.png') no-repeat center center;
+}
+
+.icon-question {
+    background: url('icons/help.png') no-repeat center center;
+}
+
+.icon-storage {
+    background: url('icons/application_from_storage.png') no-repeat center center;
+}
+
+.icon-attach {
+    background: url('icons/icon_attachment.gif') no-repeat center center;
+}
+
+.icon-view {
+    background: url('icons/page_find.gif') no-repeat center center;
+}
+
+.icon-this {
+    background: url('icons/this.gif') no-repeat center center;
+}
+
+.icon-whole {
+    background: url('icons/whole.gif') no-repeat center center;
+}
+
+.icon-create_from_PR {
+    background: url('icons/create_from.png') no-repeat center center;
+}
+
+.icon-create_from_RFQ {
+    background: url('icons/create_from.png') no-repeat center center;
+}
+
+.icon-dollar {
+    background: url('icons/money_dollar.png') no-repeat center center;
+}
+
+.icon-assign {
+    background: url('icons/user.png') no-repeat center center;
+}
+
+.icon-document_table {
+    background: url('icons/document-table.png') no-repeat center center;
+}
+
+.icon-create_from_WR {
+    background: url('icons/create_from.png') no-repeat center center;
+}
+
+.icon-create_from_PO {
+    background: url('icons/create_from.png') no-repeat center center;
+}
+
+.icon-complete {
+    background: url('icons/check-circle.png') no-repeat center center;
+}
+
+.icon-view_contract {
+    background: url('icons/detail.png') no-repeat center center;
+}
+
+.icon-view_report {
+    background: url('icons/reports.png') no-repeat center center;
+}
+
+.icon-save_sync {
+    background: url('icons/page_save.png') no-repeat center center;
+}
+
+.icon-comment {
+    background: url('icons/comment_add.png') no-repeat center center;
+}
+
+.icon-schedule {
+    background: url('icons/compass--plus.png') no-repeat center center;
+}
+
+.icon-release_machine {
+    background: url('icons/compass--exclamation.png') no-repeat center center;
+}
+
+.icon-complete_outsourcing {
+    background: url('icons/compass--minus.png') no-repeat center center;
+}
+
+.icon-reschedule {
+    background: url('icons/calculator--pencil.png') no-repeat center center;
+}
+
+.icon-clearReschedule {
+    background: url('icons/calculator--minus.png') no-repeat center center;
+}
+
+.icon-listMachine {
+    background: url('icons/wrench-screwdriver.png') no-repeat center center;
+}
+.icon-arrow_up {
+    background: url('icons/arrow_up.png') no-repeat center center;
+}
+.icon-arrow_down {
+    background: url('icons/arrow_down.png') no-repeat center center;
+}
+.icon-cog_add {
+    background: url('icons/cog_add.png') no-repeat center center;
+}

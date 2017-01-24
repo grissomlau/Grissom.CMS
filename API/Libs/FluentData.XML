@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FluentData</name>
+    </assembly>
+    <members>
+        <member name="M:FluentData.ISelectBuilder`1.Distinct">
+            <summary>
+            Dh 2014-04-23 Add distinct key word
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:FluentData.ISelectBuilder`1.RowNumberOrderBy(System.String)" -->
+        <member name="M:FluentData.ISelectBuilder`1.FoundRows">
+            <summary>
+            added by grissom on 2016-03-14 mysql 返回未分页前的记录行数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FluentData.SelectBuilderData.Distinct">
+            <summary>
+            Dh 2014-04-23 添加 distinct 关键字
+            </summary>
+        </member>
+        <member name="F:FluentData.SelectBuilderData._hasFoundRows">
+            <summary>
+            added by grissom on 2016-03-14 mysql 返回分页前的查询行数
+            </summary>
+        </member>
+        <member name="M:FluentData.ReflectionHelper.GetPropertyType(System.Reflection.PropertyInfo)">
+            <summary>
+            Includes a work around for getting the actual type of a Nullable type.
+            </summary>
+        </member>
+    </members>
+</doc>

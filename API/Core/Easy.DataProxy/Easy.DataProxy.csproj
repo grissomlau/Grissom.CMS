@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53FD5C32-B7D8-47E1-BE37-E00B253B67EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Easy.DataProxy</RootNamespace>
+    <AssemblyName>Easy.DataProxy</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Libs\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\Libs\Easy.DataProxy.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builders\InsertUpdateDelete\BuilderData.cs" />
+    <Compile Include="Builders\InsertUpdateDelete\DbBuilder.cs" />
+    <Compile Include="Commons\DbField.cs" />
+    <Compile Include="Builders\InsertUpdateDelete\IDbBuilder.cs" />
+    <Compile Include="Builders\Select\ISelectBuilder.cs" />
+    <Compile Include="Builders\Select\SelectBuilder.cs" />
+    <Compile Include="Builders\Select\SelectBuilderData.cs" />
+    <Compile Include="Commons\Extension.cs" />
+    <Compile Include="Commons\LogicalKeyType.cs" />
+    <Compile Include="Commons\OperatorType.cs" />
+    <Compile Include="Proxy\Proxy.cs" />
+    <Compile Include="Proxy\ProxyData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategies\ConditionParser\ICParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Strategies\ConditionParser\SqlServerCParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Strategies\InsertUpdateDeleteParser\Parser.cs" />
+    <Compile Include="Strategies\InsertUpdateDeleteParser\ParserData.cs" />
+    <Compile Include="Strategies\DbStrategy.cs" />
+    <Compile Include="Strategies\IStrategy.cs" />
+    <Compile Include="Strategies\SelectStrategy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Strategies\StrategyData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Easy.SqlConfig\Easy.SqlConfiguration.csproj">
+      <Project>{b98fa40f-e68d-4120-a7be-524d486300c1}</Project>
+      <Name>Easy.SqlConfiguration</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

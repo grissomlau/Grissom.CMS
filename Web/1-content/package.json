@@ -1,0 +1,25 @@
+{
+  "name": "all",
+  "description": "js,css 文件合并与压缩",
+  "version": "0.1.0",
+  "homepage": "https://git.oschina.net/grissom/grunt_demo.git",
+  "author": {"name":"Grissom","email":"grissomlau@qq.com"},
+  "repository": {
+    "type": "git",
+    "url": "https://git.oschina.net/grissom/grunt_demo.git"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt": "~0.4.5",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-css":  ">0.0.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-compass":"*",
+    "grunt-compass-multiple":"*"
+  },
+  "keywords": []
+}
