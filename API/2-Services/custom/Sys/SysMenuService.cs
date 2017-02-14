@@ -13,7 +13,7 @@ namespace Services
     /// </summary>    
     public partial class SysMenuService : BaseService<SysMenu>
     {
-        public List<SysMenu> GetMenus()
+        public static List<SysMenu> GetMenus()
         {
             var sql = @"
 Select menu.*

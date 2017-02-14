@@ -14,6 +14,8 @@ namespace Services
     {
         public static List<SysMenuPoint> GetByUserId(long userId)
         {
+            var user = new SysUserService().GetModel("Id", userId + "");
+
             var sql = @"
 Select point.*
 From SysMenuPoint point
@@ -21,9 +23,27 @@ Join SysRoleMenuPoint rolePoint On rolePoint.MenuCode = point.MenuCode And roleP
 Join SysUserRole userRole On userRole.RoleId =  rolePoint.RoleId
 Where userRole.UserId = @userId;
 ";
+
+            if (user != null && user.Account == "admin")
+            {
+                sql = @"
+Select *
+From SysMenuPoint
+";
+
+            }
+
             return DbHelper.GetModels<SysMenuPoint>(sql, new DbField("userId", userId));
         }
 
-
+        public static List<SysMenuPoint> GetByMenuCode(string menuCode)
+        {
+            var sql = @"
+Select *
+From SysMenuPoint 
+Where  MenuCode = @MenuCode
+";
+            return DbHelper.GetModels<SysMenuPoint>(sql, new DbField("MenuCode", menuCode));
+        }
     }
 }

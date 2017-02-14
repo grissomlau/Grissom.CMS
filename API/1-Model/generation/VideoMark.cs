@@ -19,7 +19,7 @@ namespace Model
         /// <summary>
         /// 视频id
         /// </summary>
-        public long VideoId { get; set; }
+        public long MainId { get; set; }
     
         /// <summary>
         /// 分数
@@ -32,9 +32,9 @@ namespace Model
         public bool IsDeleted { get; set; }
     
         /// <summary>
-        /// 创建人Id
+        /// 拥有者Id
         /// </summary>
-        public long CreatedUserId { get; set; }
+        public long OwnerId { get; set; }
     
         /// <summary>
         /// 创建时间

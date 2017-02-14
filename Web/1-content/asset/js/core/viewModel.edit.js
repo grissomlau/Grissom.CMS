@@ -57,7 +57,6 @@ com.viewModel.edit = function (data) {
             com.message('warn', resx.INFO_NOT_CHANGED);
             return false;
         }
-        console.log(post);
 
         me._post(post, function (success, resp) {
             if (success) {
@@ -70,11 +69,10 @@ com.viewModel.edit = function (data) {
             } else {
                 if (!hiddenMsg) {
                     if (typeof resp === 'object') {
-                        var msg = resp.Msg != undefined ? resx[resp.Msg] : resp.Msg;
-                        var right = resp.right_msg != undefined ? resp.right_msg : "";
-                        var left = resp.left_msg != undefined ? resp.left_msg : "";
+                        var msg = resx[resp.Msg] ? resx[resp.Msg] : resp.Msg;
+                        var right = resp.RightMsg ? resp.RightMsg : "";
+                        var left = resp.LeftMsg ? resp.LeftMsg : "";
                         com.message("failed", left + msg + ", " + right);
-
                     } else {
                         var Msg = post.msg_failed || '保存失败';
                         com.message("failed", me.resx[Msg] + " " + resp);
@@ -336,6 +334,8 @@ com.viewModel.edit = function (data) {
         };
 
         me._save(target, function (success, resp) {
+            console.log("save");
+            console.log(resp);
             if (success) {
                 com.message("success", me.resx.__rejectSuccess)
                 if (success)
@@ -680,7 +680,7 @@ com.viewModel.edit = function (data) {
             */
             //TODO:用于替换Test,替换按钮，弹出窗体
             //url = url.replace("/test", "");
-    
+
             var width, height;
             $('#ifr').hide();
             $('#ifr').attr('src', '');

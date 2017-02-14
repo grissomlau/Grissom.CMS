@@ -54,4 +54,99 @@
       </Fields>
     </Where>
   </SingleQuery>
+  <Children>
+    <SqlConfig>
+      <Table>SysUserRole</Table>
+      <JsonName>users</JsonName>
+      <Dependency>
+        <Fields>
+          <Field Name='RoleId' DependencyName='Id'></Field>
+        </Fields>
+      </Dependency>
+      <PKs>
+        RoleId,UserId
+      </PKs>
+      <ID>
+      </ID>
+      <Insert>
+        <Fields>
+          <Field Name='Id' DbName='UserId' IsIgnore='false'></Field>
+          <Field Name='RoleId' IsIgnore='false'></Field>
+        </Fields>
+      </Insert>
+      <Update>
+        <Fields>
+        </Fields>
+        <Where>
+          <Fields>
+            <Field Name='Id' DbName='UserId' Cp='equal'></Field>
+            <Field Name='RoleId' Cp='equal'></Field>
+          </Fields>
+        </Where>
+      </Update>
+      <Delete>
+        <Where>
+          <Fields>
+            <Field Name='Id' DbName='UserId' Cp='equal'></Field>
+            <Field Name='RoleId' Cp='equal'></Field>
+          </Fields>
+        </Where>
+      </Delete>
+    </SqlConfig>
+    <!--权限分配-菜单-->
+    <SqlConfig>
+      <Table>SysRoleMenu</Table>
+      <Pks>RoleId,MenuCode</Pks>
+      <JsonName>menus</JsonName>
+      <DeleteAnyway>true</DeleteAnyway>
+      <Dependency>
+        <Fields>
+          <Field Name='RoleId' DependencyName='Id'></Field>
+        </Fields>
+      </Dependency>
+      <Insert>
+        <Fields>
+          <Field Name="RoleId" IsIgnore="false"></Field>
+          <Field Name="MenuCode" IsIgnore="false"></Field>
+        </Fields>
+      </Insert>
+      <Delete>
+        <Where>
+          <Fields>
+            <Field Name="RoleId" Cp="equal"></Field>
+            <Field Name="MenuCode" Cp="equal"></Field>
+          </Fields>
+        </Where>
+      </Delete>
+    </SqlConfig>
+    <!--权限分配-按钮-->
+    <SqlConfig>
+      <Table>SysRoleMenuPoint</Table>
+      <Pks>RoleId,MenuCode,PointCode</Pks>
+      <JsonName>points</JsonName>
+      <DeleteAnyway>true</DeleteAnyway>
+      <Dependency>
+        <Fields>
+          <Field Name='RoleId' DependencyName='Id'></Field>
+        </Fields>
+      </Dependency>
+      <Insert>
+        <Fields>
+          <Field Name="RoleId" IsIgnore="false"></Field>
+          <Field Name="MenuCode" IsIgnore="false"></Field>
+          <Field Name="PointCode" IsIgnore="false"></Field>
+        </Fields>
+      </Insert>
+      <Delete>
+        <Where>
+          <Fields>
+            <Field Name="RoleId" Cp="equal"></Field>
+            <Field Name="MenuCode" Cp="equal"></Field>
+            <Field Name="PointCode" Cp="equal"></Field>
+          </Fields>
+        </Where>
+      </Delete>
+    </SqlConfig>
+  </Children>
+
 </SqlConfig>

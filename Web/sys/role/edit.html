@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" 1-content="width=device-width" />
-    <link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="../../1-content/all.css" rel="stylesheet" />
     <script src="../../1-content/all.js"></script>
     <script src="../../1-content/comData.js"></script>
@@ -18,6 +17,58 @@
             <div class="col2"><input type="text" class="easyui-uc_validatebox" data-bind="value:form.Id,enable:false,attr:{placeholder:'自动生成'}" /></div>
             <div class="col2">角色名称</div>
             <div class="col2"><input type="text" class="easyui-uc_validatebox" data-bind="value:form.Name" /></div>
+        </div>
+        <div class="row">
+            <div class="col3">
+                <fieldset class="dh-group" style="width:200px;margin-left: 5px; float: left;">
+                    <legend data-bind="html: '角色菜单'"></legend>
+                    <div class="row">
+                        <div class="easyui-panel" style="padding:5px">
+                            <ul id="RightTree" class="easyui-tree" data-options="method:'get',cascadeCheck:false,animate:true,lines:true,checkbox:true,formatter:formatterTree"></ul>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="col7">
+                <fieldset class="dh-group dh-form" style="width: 500px; margin-left: 5px; float: left;">
+                    <legend data-bind="html: '角色用户'"></legend>
+                    <div class="row dh-note">
+                        <div class="col2">
+                            <label data-bind="html: '已选'">
+                            </label>
+                        </div>
+                        <div class="col1">
+                        </div>
+                        <div class="col2">
+                            <label data-bind="html: '未选'">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col2">
+                            <input id="groupUser" type="text" class="easyui-uc_listbox" style="width:150px;height: 300px"
+                                   data-options="valueField:'Id',textField:'Name',url:urls.getSelectedUser,onDbClick:_user._removeSelected" />
+                        </div>
+                        <div class="col1" id="userBtns">
+                            <button style="width:70px" class="easyui-uc_validatebox" title="addSelected">
+                                <
+                            </button>
+                            <button style="width:70px" class="easyui-uc_validatebox" title="addAll">
+                                <<
+                            </button>
+                            <button style="width:70px" class="easyui-uc_validatebox" title="removeSelected">
+                                >
+                            </button>
+                            <button style="width:70px" class="easyui-uc_validatebox" title="removeAll">
+                                >>
+                            </button>
+                        </div>
+                        <div class="col2">
+                            <input id="user" type="text" class="easyui-uc_listbox" style="width:150px;height: 300px" data-options="valueField:'Id',textField:'Name',url:urls.getUnSelectedUser, onDbClick:_user._addSelected" />
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
         </div>
     </div>
     <div id="foot" style="display:none">

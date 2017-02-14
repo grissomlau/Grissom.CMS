@@ -4,8 +4,8 @@ var viewModel = function (data) {
 }
 
 var __pageSetting = {
-    modalWidth: 650,
-    modalHeight: 500,
+    modalWidth:800,
+    modalHeight: 600,
     title: '视频'
 };
 (function () {

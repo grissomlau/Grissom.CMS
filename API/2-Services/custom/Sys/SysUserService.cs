@@ -12,8 +12,7 @@ namespace Services
     /// </summary>    
     public partial class SysUserService : BaseService<SysUser>
     {
-
-        public SysUser Get(string account, string pwd)
+        public static SysUser Get(string account, string pwd)
         {
             var sql = @"
 Select *

@@ -30,12 +30,12 @@
   </Insert>
   <Update>
     <Fields>
+      <Field Name="CreatedDate" IsIgnore="true"></Field>
+      <Field Name="UpdatedDate" IsIgnore="true"></Field>
     </Fields>
     <Where>
       <Fields>
         <Field Name="Id" Cp="equal"></Field>
-        <Field Name="CreatedDate" IsIgnore="true"></Field>
-        <Field Name="UpdatedDate" IsIgnore="true"></Field>
       </Fields>
     </Where>
   </Update>
@@ -54,4 +54,83 @@
       </Fields>
     </Where>
   </SingleQuery>
+  <Children>
+    <SqlConfig>
+      <Table>VideoMark</Table>
+      <JsonName>marks</JsonName>
+      <ID>Id</ID>
+      <PKs>Id</PKs>
+      <Dependency>
+        <Fields>
+          <Field Name="MainId" DependencyName="Id"></Field>
+        </Fields>
+      </Dependency>
+      <Update>
+        <Where>
+          <Fields>
+            <Field Name="Id" Cp="equal"></Field>
+          </Fields>
+        </Where>
+      </Update>
+      <Delete>
+        <Where>
+          <Fields>
+            <Field Name="Id" Cp="equal"></Field>
+          </Fields>
+        </Where>
+      </Delete>
+    </SqlConfig>
+    <SqlConfig>
+      <Table>VideoComment</Table>
+      <JsonName>comments</JsonName>
+      <ID>Id</ID>
+      <PKs>Id</PKs>
+      <Dependency>
+        <Fields>
+          <Field Name="MainId" DependencyName="Id"></Field>
+        </Fields>
+      </Dependency>
+      <Update>
+        <Where>
+          <Fields>
+            <Field Name="Id" Cp="equal"></Field>
+          </Fields>
+        </Where>
+      </Update>
+      <Delete>
+        <Where>
+          <Fields>
+            <Field Name="Id" Cp="equal"></Field>
+          </Fields>
+        </Where>
+      </Delete>
+      <Children>
+        <SqlConfig>
+          <Table>VideoCommentUpdown</Table>
+          <JsonName>commentUpdowns</JsonName>
+          <ID>Id</ID>
+          <PKs>Id</PKs>
+          <Dependency>
+            <Fields>
+              <Field Name="CommentId" DependencyName="Id"></Field>
+            </Fields>
+          </Dependency>
+          <Update>
+            <Where>
+              <Fields>
+                <Field Name="Id" Cp="equal"></Field>
+              </Fields>
+            </Where>
+          </Update>
+          <Delete>
+            <Where>
+              <Fields>
+                <Field Name="Id" Cp="equal"></Field>
+              </Fields>
+            </Where>
+          </Delete>
+        </SqlConfig>
+      </Children>
+    </SqlConfig>
+  </Children>
 </SqlConfig>

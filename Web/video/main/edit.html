@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" 1-content="width=device-width" />
-    <link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="../../1-content/all.css" rel="stylesheet" />
     <script src="../../1-content/all.js"></script>
     <script src="../../1-content/comData.js"></script>
@@ -26,7 +25,7 @@
         <div class="row">
             <div class="col2">总评分</div>
             <div class="col2">
-                <input type="text" class="easyui-uc_numberspinner" data-bind="uc_numberspinnerValue:form.TotalMark" />
+                <input type="text" class="easyui-uc_numberspinner" data-bind="uc_numberspinnerValue:form.TotalMark,uc_numberspinnerEnable:false" data-options="precision:2" />
             </div>
             <div class="col2">视频地址</div>
             <div class="col2">
@@ -39,13 +38,73 @@
                 <textarea class="easyui-uc_validatebox" data-bind="value:form.Desc"></textarea>
             </div>
         </div>
+        <div class="row">
+            <div class="easyui-uc_tabs">
+                <div data-options="title:'评分管理'">
+                    <div class="dh-form">
+                        <div class="row">
+                            <table data-bind="simpleDatagrid:gridMark" data-options="columns:[[
+                   {field:'Mark',title:'分数',width:100, editor:{type:'uc_numberspinner', options:{min:0,max:5}}},
+                   {field:'_OwnerName',title:'评分者',width:150,formatter:gridMark._formatSelectOwner}
+                   ]]"></table>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-options="title:'点评管理'">
+                    <div class="dh-form">
+                        <div class="row">
+                            <table data-bind="simpleDatagrid:gridComment" data-options="columns:[[
+                   {field:'Comment',title:'评论内容',width:200},
+                   {field:'UpCount',title:'顶数',width:50},
+                   {field:'DownCount',title:'踩数',width:50},
+                   {field:'_OwnerName',title:'评论者',width:100}
+                   ]]"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div id="foot" style="display:none">
-        <div style="display: none">
-            <div id="__win" data-bind="window:_editWin" style="overflow: hidden">
-                <iframe id="ifr" scrolling="auto" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+    <div style="display: none">
+        <div data-bind="dialog: winComment">
+            <div class="dh-form">
+                <div class="row">
+                    <div class="col2">
+                        评论内容
+                    </div>
+                    <div class="col6">
+                        <textarea class="easyui-uc_validatebox" style="min-height:50px" data-bind="value:formComment.Comment"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col2">顶数</div>
+                    <div class="col2"><input class="easyui-uc_numberspinner" data-bind="uc_numberspinnerValue:formComment.UpCount,uc_numberspinnerEnable:false" /></div>
+                    <div class="col2">踩数</div>
+                    <div class="col2"><input class="easyui-uc_numberspinner" data-bind="uc_numberspinnerValue:formComment.DownCount,uc_numberspinnerEnable:false" /></div>
+                </div>
+                <div class="row">
+                    <div class="col2">评论人</div>
+                    <div class="col2">
+                        <input class="easyui-uc_validatebox" data-bind="value:formComment._OwnerName, enable:false" style="width:105px" />
+                        <a class="easyui-uc_linkbutton" data-bind="click:function(){winSelectOwner.currOpenTrigger = winSelectOwner.openTrigger.comment;winSelectOwner._open()}" data-options="iconCls:'icon-search'" style="width:25px"></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col2">对评论顶、踩管理</div>
+                </div>
+                <div class="row" style="min-height:100px">
+                    <table data-bind="simpleDatagrid:commentUpDownGrid" data-options="columns:[[
+                           {field:'IsUp',title:'是否为顶',width:100,formatter:Utils.formatBool, editor:{type:'uc_checkbox',options:{on:1,off:0}}},
+                              {field:'_OwnerName',title:'顶、踩用户',width:150,formatter:commentUpDownGrid._formatSelectOwner}
+                           ]]"></table>
+                </div>
             </div>
+        </div>
+        <div data-bind="dialog: winSelectOwner">
+            <iframe src='/bas/owner/pick.html' scrolling='auto' frameborder='0'
+                    style='width: 100%; height: 95%;'></iframe>
         </div>
     </div>
 </body>

@@ -49,8 +49,7 @@ namespace WebApi
         private static bool CheckCredential(string username, string password, out string userid)
         {
             // 用户名和密码验证
-            var userService = new SysUserService();
-            var user = userService.Get(username, Commons.HashString(password));
+            var user = SysUserService.Get(username, Commons.HashString(password));
 
             if (user != null)
             {

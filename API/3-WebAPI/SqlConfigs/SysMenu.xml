@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SqlConfig>
+  <Select>
+    main.*, parent.Name as _ParentName
+  </Select>
+  <From>
+    SysMenu main
+    left join SysMenu parent on parent.code = main.parentCode
+  </From>
+  <PKs>Code</PKs>
+  <Where>
+    <Fields>
+      <Field Name="_notDeleted"><![CDATA[ And main.IsDeleted <> 1]]></Field>
+      <Field Name="Code" Prefix="main" Cp="like"></Field>
+      <Field Name="Name" Prefix="main" Cp="like"></Field>
+    </Fields>
+  </Where>
+  <OrderBy>
+    <Default>Code</Default>
+  </OrderBy>
+  <Table>
+    SysMenu
+  </Table>
+  <Insert>
+    <Fields>
+      <Field Name="CreatedDate" IsIgnore="true"></Field>
+      <Field Name="UpdatedDate" IsIgnore="true"></Field>
+    </Fields>
+  </Insert>
+  <Update>
+    <Fields>
+    </Fields>
+    <Where>
+      <Fields>
+        <Field Name="Code" Cp="equal"></Field>
+        <Field Name="CreatedDate" IsIgnore="true"></Field>
+        <Field Name="UpdatedDate" IsIgnore="true"></Field>
+      </Fields>
+    </Where>
+  </Update>
+  <Delete>
+    <DeleteAnyway>false</DeleteAnyway>
+    <Where>
+      <Fields>
+        <Field Prefix="main" Name="Code" Cp="equal"></Field>
+      </Fields>
+    </Where>
+  </Delete>
+  <SingleQuery>
+    <Where>
+      <Fields>
+        <Field Prefix="main" Name="Code" Cp="equal"></Field>
+      </Fields>
+    </Where>
+  </SingleQuery>
+  <Children>
+    <SqlConfig>
+      <Table>SysMenuPoint</Table>
+      <JsonName>point</JsonName>
+      <PKs>Code,MenuCode</PKs>
+      <Dependency>
+        <Fields>
+          <Field Name="MenuCode" DependencyName="MenuCode"></Field>
+        </Fields>
+      </Dependency>
+      <Update>
+        <Where>
+          <Fields>
+            <Field Name="Code" Cp="equal"></Field>
+            <Field Name="MenuCode" Cp="equal"></Field>
+          </Fields>
+        </Where>
+      </Update>
+      <Delete>
+        <Where>
+          <Fields>
+            <Field Name="Code" Cp="equal"></Field>
+            <Field Name="MenuCode" Cp="equal"></Field>
+          </Fields>
+        </Where>
+      </Delete>
+    </SqlConfig>
+  </Children>
+</SqlConfig>

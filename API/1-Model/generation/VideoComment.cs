@@ -19,12 +19,7 @@ namespace Model
         /// <summary>
         /// 视频id
         /// </summary>
-        public long VideoId { get; set; }
-    
-        /// <summary>
-        /// 回复的评论id
-        /// </summary>
-        public long ParentCommentId { get; set; }
+        public long MainId { get; set; }
     
         /// <summary>
         /// 评论内容
@@ -47,9 +42,9 @@ namespace Model
         public bool IsDeleted { get; set; }
     
         /// <summary>
-        /// 创建人Id
+        /// 拥有者Id
         /// </summary>
-        public long CreatedUserId { get; set; }
+        public long OwnerId { get; set; }
     
         /// <summary>
         /// 创建时间

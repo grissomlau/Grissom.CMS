@@ -39,7 +39,7 @@ namespace Model
         /// <summary>
         /// 总评分
         /// </summary>
-        public int TotalMark { get; set; }
+        public decimal TotalMark { get; set; }
     
         /// <summary>
         /// 是否已删除
@@ -47,9 +47,9 @@ namespace Model
         public bool IsDeleted { get; set; }
     
         /// <summary>
-        /// 创建人Id
+        /// 拥有者Id
         /// </summary>
-        public long CreatedUserId { get; set; }
+        public long OwnerId { get; set; }
     
         /// <summary>
         /// 创建时间

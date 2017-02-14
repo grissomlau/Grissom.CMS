@@ -1,4 +1,4 @@
-/*! all - v0.1.0 - 2017-01-23*/
+/*! all - v0.1.0 - 2017-02-14*/
 // Knockout JavaScript library v3.1.0
 // (c) Steven Sanderson - http://knockoutjs.com/
 // License: MIT (http://www.opensource.org/licenses/mit-license.php)
@@ -16512,9 +16512,9 @@ com.handleResp = function (resp, msgCode, hiddenMsg, successCallback) {
 
     if (typeof resp === 'string' && Utils.isJson(resp)) {
         resp = JSON.parse(resp);
-        var msg = resp.msg_code != undefined ? resx[resp.msg_code] : "";
-        if (resp.msg_code != undefined) {
-            msg = resx[resp.msg_code] || resp.msg_code;
+        var msg = resp.Msg ? resx[resp.Msg] : "";
+        if (resp.Msg) {
+            msg = resx[resp.Msg] || resp.Msg;
         }
         if (msgCode) {
             msg = (resx[msgCode] || msgCode) + ' ' + msg;
@@ -16538,7 +16538,7 @@ com.handleResp = function (resp, msgCode, hiddenMsg, successCallback) {
         } else {
             left = resp.left_msg != undefined ? resp.left_msg : "";
         }
-        if (resp.status) {
+        if (resp.Status) {
             com.message("success", left + ' ' + msg + ' ' + right);
             if (successCallback) {
                 successCallback();
@@ -16547,9 +16547,9 @@ com.handleResp = function (resp, msgCode, hiddenMsg, successCallback) {
         else
             com.message("failed", left + ' ' + msg + ' ' + right);
     } else if (typeof resp === 'object') {
-        var msg = resp.msg_code != undefined ? resx[resp.msg_code] : "";
-        if (resp.msg_code != undefined) {
-            msg = resx[resp.msg_code] || resp.msg_code;
+        var msg = resp.Msg != undefined ? resx[resp.Msg] : "";
+        if (resp.Msg != undefined) {
+            msg = resx[resp.Msg] || resp.Msg;
         }
         if (msgCode) {
             msg = (resx[msgCode] || msgCode) + ' ' + msg;
@@ -16561,7 +16561,7 @@ com.handleResp = function (resp, msgCode, hiddenMsg, successCallback) {
                 right += ',' + resx[key] + ':' + resp.right_msg[key];
             }
         } else {
-            right = resp.right_msg != undefined ? resp.right_msg : "";
+            right = resp.right_msg ? resp.right_msg : "";
         }
 
         var left = '';
@@ -16570,9 +16570,9 @@ com.handleResp = function (resp, msgCode, hiddenMsg, successCallback) {
                 left += ',' + resx[key] + ':' + resp.left_msg[key];
             }
         } else {
-            left = resp.left_msg != undefined ? resp.left_msg : "";
+            left = resp.left_msg ? resp.left_msg : "";
         }
-        if (resp.status) {
+        if (resp.Status) {
             com.message("success", left + ' ' + msg + ' ' + right);
             if (successCallback) {
                 successCallback();
@@ -23036,12 +23036,11 @@ com.viewModel.search = function (data) {
 
     me._beforeAdd = undefined;
     me.showWin = function (title, url, iwidth, iheight, winType) {
-        /*if (winType != 'popUp') {
-            // lgr 2015-04-20 rental 的编辑界面直接在新界面中打开
+        if (winType == 'newTab') {
+            // lgr 2015-04-20  编辑界面直接在新界面中打开
             window.open(url);
             return;
         }
-        */
         //TODO:用于替换Test,替换按钮，弹出窗体
         //url = url.replace("/test", "");
 
@@ -23228,9 +23227,9 @@ com.viewModel.search = function (data) {
     };
 
     me._editWin = {
-        closed:true,
-        modal:true,
-        minimizable:false,
+        closed: true,
+        modal: true,
+        minimizable: false,
         _close: function () {
             me._editWin._close();
         },
@@ -23243,7 +23242,7 @@ com.viewModel.search = function (data) {
             */
             //TODO:用于替换Test,替换按钮，弹出窗体
             //url = url.replace("/test", "");
-     
+
             var width, height;
             $('#ifr').hide();
             $('#ifr').attr('src', '');
@@ -23531,7 +23530,7 @@ com.viewModel.search = function (data) {
                         }
 
                         if (resp === 1 || resp === true || resp.Status === true) {
-                            com.message("success","删除成功");
+                            com.message("success", "删除成功");
                             me._query();
 
                         } else {
@@ -23934,7 +23933,6 @@ com.viewModel.edit = function (data) {
             com.message('warn', resx.INFO_NOT_CHANGED);
             return false;
         }
-        console.log(post);
 
         me._post(post, function (success, resp) {
             if (success) {
@@ -23947,11 +23945,10 @@ com.viewModel.edit = function (data) {
             } else {
                 if (!hiddenMsg) {
                     if (typeof resp === 'object') {
-                        var msg = resp.Msg != undefined ? resx[resp.Msg] : resp.Msg;
-                        var right = resp.right_msg != undefined ? resp.right_msg : "";
-                        var left = resp.left_msg != undefined ? resp.left_msg : "";
+                        var msg = resx[resp.Msg] ? resx[resp.Msg] : resp.Msg;
+                        var right = resp.RightMsg ? resp.RightMsg : "";
+                        var left = resp.LeftMsg ? resp.LeftMsg : "";
                         com.message("failed", left + msg + ", " + right);
-
                     } else {
                         var Msg = post.msg_failed || '保存失败';
                         com.message("failed", me.resx[Msg] + " " + resp);
@@ -24213,6 +24210,8 @@ com.viewModel.edit = function (data) {
         };
 
         me._save(target, function (success, resp) {
+            console.log("save");
+            console.log(resp);
             if (success) {
                 com.message("success", me.resx.__rejectSuccess)
                 if (success)
@@ -24557,7 +24556,7 @@ com.viewModel.edit = function (data) {
             */
             //TODO:用于替换Test,替换按钮，弹出窗体
             //url = url.replace("/test", "");
-    
+
             var width, height;
             $('#ifr').hide();
             $('#ifr').attr('src', '');
@@ -24848,13 +24847,16 @@ __resizeLayout = function () {
         var h = $("#toolbar").parent().height() - $('#toolbar').outerHeight() - $('#searchbar').outerHeight();
 
         $("#__content").height(h);
-        //$("#__searchbar").panel('resize', { height: $("#__searchbar .dh-form").height() + 40 });
-        //$("#datagrid").layout('resize', { height: h });
-        $("div.easyui-uc_layout").layout('resize', {});
-
-        $("table[data-bind]").datagrid("resize");
-    }, 200);
+        if ($("#__searchbar").length > 0) {
+            $("#__searchbar").panel('resize', { height: $("#__searchbar .dh-form").height() + 10 });
+        } else {
+            $("div.easyui-uc_layout").layout('resize', {});
+            $("table[data-bind]").datagrid("resize");
+        }
+        $("div.easyui-uc_layout").layout('resize', { height: h });
+    }, 100);
 };
+
 $(window).resize(function () {
     __resizeLayout();
 });
@@ -24866,3 +24868,4 @@ $(function () {
         window.onPageInit();
     }
 })
+

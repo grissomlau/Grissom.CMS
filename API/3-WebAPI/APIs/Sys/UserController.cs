@@ -13,17 +13,12 @@ namespace WebApi.APIs.Sys
 {
     public class UserController : BaseApiController<SysUser>
     {
-        SysMenuService _menuService;
-        public UserController(SysMenuService menuService)
-        {
-            this._menuService = menuService;
-        }
         [HttpGet]
         public MsgModel<List<SysMenu>> Menus()
         {
             return new MsgModel<List<SysMenu>>
             {
-                Data = this._menuService.GetMenus(),
+                Data = SysMenuService.GetMenus(),
                 Status = true,
                 Msg = ""
             };

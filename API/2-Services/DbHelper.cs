@@ -1000,7 +1000,7 @@ namespace Services
                 {
                     fieldStr += x.Name + ",";
                 });
-                throw new Exception("{\"status\":false,\"msg_code\":\"__unique_error\",\"right_msg\":\"" + fieldStr.TrimEnd(',') + "\"}");
+                throw new UniqueException("验证唯一性失败：" + fieldStr.TrimEnd(','));
             }
         }
 
@@ -1090,8 +1090,8 @@ namespace Services
                         {
                             ib.Column(x.DbName, x.Value);
                         });
-                        ib.Column("created_user_id", userId);
-                        ib.Column("created_date", DateTime.Now, DataTypes.DateTime);
+                        ib.Column("CreatedUserId", userId);
+                        ib.Column("CreatedDate", DateTime.Now, DataTypes.DateTime);
                         ib.Execute();
                     }
                     else
@@ -1101,8 +1101,8 @@ namespace Services
                         {
                             ub.Column(x.DbName, x.Value);
                         });
-                        ub.Column("updated_user_id", userId);
-                        ub.Column("updated_date", DateTime.Now, DataTypes.DateTime);
+                        ub.Column("UpdatedUserId", userId);
+                        ub.Column("UpdatedDate", DateTime.Now, DataTypes.DateTime);
                         row.Fields.Where(x => x.IsPk).ToList().ForEach(x =>
                         {
                             ub.Where(x.DbName, x.Value);

@@ -936,9 +936,9 @@ com.handleResp = function (resp, msgCode, hiddenMsg, successCallback) {
 
     if (typeof resp === 'string' && Utils.isJson(resp)) {
         resp = JSON.parse(resp);
-        var msg = resp.msg_code != undefined ? resx[resp.msg_code] : "";
-        if (resp.msg_code != undefined) {
-            msg = resx[resp.msg_code] || resp.msg_code;
+        var msg = resp.Msg ? resx[resp.Msg] : "";
+        if (resp.Msg) {
+            msg = resx[resp.Msg] || resp.Msg;
         }
         if (msgCode) {
             msg = (resx[msgCode] || msgCode) + ' ' + msg;
@@ -962,7 +962,7 @@ com.handleResp = function (resp, msgCode, hiddenMsg, successCallback) {
         } else {
             left = resp.left_msg != undefined ? resp.left_msg : "";
         }
-        if (resp.status) {
+        if (resp.Status) {
             com.message("success", left + ' ' + msg + ' ' + right);
             if (successCallback) {
                 successCallback();
@@ -971,9 +971,9 @@ com.handleResp = function (resp, msgCode, hiddenMsg, successCallback) {
         else
             com.message("failed", left + ' ' + msg + ' ' + right);
     } else if (typeof resp === 'object') {
-        var msg = resp.msg_code != undefined ? resx[resp.msg_code] : "";
-        if (resp.msg_code != undefined) {
-            msg = resx[resp.msg_code] || resp.msg_code;
+        var msg = resp.Msg != undefined ? resx[resp.Msg] : "";
+        if (resp.Msg != undefined) {
+            msg = resx[resp.Msg] || resp.Msg;
         }
         if (msgCode) {
             msg = (resx[msgCode] || msgCode) + ' ' + msg;
@@ -985,7 +985,7 @@ com.handleResp = function (resp, msgCode, hiddenMsg, successCallback) {
                 right += ',' + resx[key] + ':' + resp.right_msg[key];
             }
         } else {
-            right = resp.right_msg != undefined ? resp.right_msg : "";
+            right = resp.right_msg ? resp.right_msg : "";
         }
 
         var left = '';
@@ -994,9 +994,9 @@ com.handleResp = function (resp, msgCode, hiddenMsg, successCallback) {
                 left += ',' + resx[key] + ':' + resp.left_msg[key];
             }
         } else {
-            left = resp.left_msg != undefined ? resp.left_msg : "";
+            left = resp.left_msg ? resp.left_msg : "";
         }
-        if (resp.status) {
+        if (resp.Status) {
             com.message("success", left + ' ' + msg + ' ' + right);
             if (successCallback) {
                 successCallback();

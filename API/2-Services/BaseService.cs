@@ -27,7 +27,7 @@ namespace Services
         /// <param name="fieldValue">字段值</param>
         /// <param name="fieldName">字段名</param>
         /// <returns></returns>
-        public T GetModel(string fieldValue, string fieldName)
+        public T GetModel(string fieldName, string fieldValue)
         {
 
             string sql = String.Format("Select * From {0} Where {1}=@{1}", this.TableName, fieldName);

@@ -47,6 +47,13 @@
     <Compile Include="BaseModel.cs" />
     <Compile Include="common\MsgModel.cs" />
     <Compile Include="common\PK.cs" />
+    <Compile Include="common\UniqueException.cs" />
+    <Compile Include="custom\VideoComment.cs" />
+    <Compile Include="custom\VideoCommentUpdown.cs" />
+    <Compile Include="custom\VideoMark.cs" />
+    <Compile Include="generation\BasOwner.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Include="generation\ModelTemplate1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,7 +95,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="custom\" />
     <Folder Include="Enum\" />
   </ItemGroup>
   <ItemGroup>

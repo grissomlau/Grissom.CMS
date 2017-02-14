@@ -233,12 +233,11 @@ com.viewModel.search = function (data) {
 
     me._beforeAdd = undefined;
     me.showWin = function (title, url, iwidth, iheight, winType) {
-        /*if (winType != 'popUp') {
-            // lgr 2015-04-20 rental 的编辑界面直接在新界面中打开
+        if (winType == 'newTab') {
+            // lgr 2015-04-20  编辑界面直接在新界面中打开
             window.open(url);
             return;
         }
-        */
         //TODO:用于替换Test,替换按钮，弹出窗体
         //url = url.replace("/test", "");
 
@@ -425,9 +424,9 @@ com.viewModel.search = function (data) {
     };
 
     me._editWin = {
-        closed:true,
-        modal:true,
-        minimizable:false,
+        closed: true,
+        modal: true,
+        minimizable: false,
         _close: function () {
             me._editWin._close();
         },
@@ -440,7 +439,7 @@ com.viewModel.search = function (data) {
             */
             //TODO:用于替换Test,替换按钮，弹出窗体
             //url = url.replace("/test", "");
-     
+
             var width, height;
             $('#ifr').hide();
             $('#ifr').attr('src', '');
@@ -728,7 +727,7 @@ com.viewModel.search = function (data) {
                         }
 
                         if (resp === 1 || resp === true || resp.Status === true) {
-                            com.message("success","删除成功");
+                            com.message("success", "删除成功");
                             me._query();
 
                         } else {

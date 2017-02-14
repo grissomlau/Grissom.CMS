@@ -86,13 +86,16 @@ __resizeLayout = function () {
         var h = $("#toolbar").parent().height() - $('#toolbar').outerHeight() - $('#searchbar').outerHeight();
 
         $("#__content").height(h);
-        //$("#__searchbar").panel('resize', { height: $("#__searchbar .dh-form").height() + 40 });
-        //$("#datagrid").layout('resize', { height: h });
-        $("div.easyui-uc_layout").layout('resize', {});
-
-        $("table[data-bind]").datagrid("resize");
-    }, 200);
+        if ($("#__searchbar").length > 0) {
+            $("#__searchbar").panel('resize', { height: $("#__searchbar .dh-form").height() + 10 });
+        } else {
+            $("div.easyui-uc_layout").layout('resize', {});
+            $("table[data-bind]").datagrid("resize");
+        }
+        $("div.easyui-uc_layout").layout('resize', { height: h });
+    }, 100);
 };
+
 $(window).resize(function () {
     __resizeLayout();
 });
@@ -104,3 +107,4 @@ $(function () {
         window.onPageInit();
     }
 })
+

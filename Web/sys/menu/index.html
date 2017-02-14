@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" 1-content="width=device-width" />
+    <link href="../../1-content/all.css" rel="stylesheet" />
+    <script src="../../1-content/all.js"></script>
+    <script src="../../1-content/comData.js"></script>
+    <script src="viewModel/index.js"></script>
+    <script type="text/javascript">
+
+    </script>
+</head>
+<body>
+    <div id="toolbar" class="dh-toolbar dh-top-toolbar" style="border-bottom: 0px !important;">
+    </div>
+    <div id="__content" class="easyui-uc_layout">
+        <div id="__searchbar" data-options="region:'north',collapsed:false,collapsible:true,doSize:true,title:''">
+            <div class="dh-form">
+                <div class="row">
+                    <div class="col2">菜单编码</div>
+                    <div class="col2"><input class="easyui-uc_validatebox" data-bind="value:form.Code" /></div>
+                    <div class="col2">菜单名称</div>
+                    <div class="col2"><input class="easyui-uc_validatebox" data-bind="value:form.Name" /></div>
+                    <div class="col1">
+                        <a class="easyui-uc_linkbutton" data-bind="click:_query()">搜索</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-options="region:'center'" style="border-top:0px !important;">
+            <table data-bind="datagrid:grid" data-options="columns:[[
+       {field:'_cb',checkbox:true,hidden:true,width:100},
+       {field:'Code',title:'菜单编码',width:100},
+       {field:'Name',title:'菜单名称',width:100},
+       {field:'_ParentName',title:'父级名称',width:100},
+       {field:'Url',title:'Url',width:200},
+       {field:'Seq',title:'菜单排序',width:100},
+       {field:'Icon',title:'小图',width:100},
+       {field:'Remark',title:'备注',width:100},
+       ]]"></table>
+        </div>
+    </div>
+    <div id="foot" style="display:none"></div>
+    <script>
+        $("#foot").load("../../1-content/__gridFoot.html");
+    </script>
+</body>
+
+</html>

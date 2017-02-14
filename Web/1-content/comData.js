@@ -17,7 +17,6 @@ var comData = {
             return "未知";
         },
         formatGender: function (value) {
-            console.log(value);
             return comData.formatter.format(comData.gender, value);
         }
     }

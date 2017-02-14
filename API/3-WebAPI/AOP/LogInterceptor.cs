@@ -1,5 +1,6 @@
 ﻿using Castle.DynamicProxy;
 using ILogger;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -33,8 +34,16 @@ namespace WebApi
             catch (Exception ex)
             {
                 _logger.LogException(ex);
-                throw ex;
+                if (ex is UniqueException)
+                {
+                    invocation.ReturnValue = MsgModel<dynamic>.Failure(ex.Message);
+                }
+                else
+                {
+                    throw;
+                }
             }
+
         }
     }
 }

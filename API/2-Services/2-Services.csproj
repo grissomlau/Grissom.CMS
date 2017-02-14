@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseService.cs" />
+    <Compile Include="custom\Bas\BasOwnerService.cs" />
     <Compile Include="custom\ModelTemplate1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -67,8 +68,12 @@
     <Compile Include="custom\Sys\SysUserService.cs" />
     <Compile Include="custom\Video\VideoCommentService.cs" />
     <Compile Include="custom\Video\VideoCommentUpdownService.cs" />
+    <Compile Include="custom\Video\VideoMainService.cs" />
     <Compile Include="custom\Video\VideoMarkService.cs" />
     <Compile Include="DbHelper.cs" />
+    <Compile Include="generation\BasOwner.cs">
+      <DependentUpon>ModelTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Include="generation\ModelTemplate1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

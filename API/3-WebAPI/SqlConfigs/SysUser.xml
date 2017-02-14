@@ -10,6 +10,7 @@
     Id
   </ID>
   <PKs>Id</PKs>
+  <Uniques>Account</Uniques>
   <Where>
     <Fields>
       <Field Name="_notDeleted"><![CDATA[ And IsDeleted <> 1]]></Field>

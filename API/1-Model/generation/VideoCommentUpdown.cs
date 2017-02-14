@@ -32,9 +32,9 @@ namespace Model
         public bool IsDeleted { get; set; }
     
         /// <summary>
-        /// 创建人Id
+        /// 拥有者Id
         /// </summary>
-        public long CreatedUserId { get; set; }
+        public long OwnerId { get; set; }
     
         /// <summary>
         /// 创建时间

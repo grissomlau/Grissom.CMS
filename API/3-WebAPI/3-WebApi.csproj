@@ -223,8 +223,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="SqlConfigs\SysMenu.xml" />
     <Content Include="SqlConfigs\SysRole.xml" />
-    <Content Include="SqlConfigs\VideoMain.xml" />
+    <Content Include="SqlConfigs\BasOwner.xml" />
+    <Content Include="SqlConfigs\VideoMain.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="SqlConfigs\SysUser.xml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -232,8 +236,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AOP\ProxyGenerationHook.cs" />
-    <Compile Include="APIs\Sys\RoleApiController.cs" />
-    <Compile Include="APIs\Sys\UserApiController.cs" />
+    <Compile Include="APIs\Bas\OwnerController.cs" />
+    <Compile Include="APIs\Sys\MenuController.cs" />
+    <Compile Include="APIs\Sys\MenuPointController.cs" />
+    <Compile Include="APIs\Sys\RoleController.cs" />
+    <Compile Include="APIs\Sys\UserController.cs" />
     <Compile Include="APIs\Video\MainController.cs" />
     <Compile Include="Helper\BaseApiController.cs" />
     <Compile Include="Helper\Commons.cs" />

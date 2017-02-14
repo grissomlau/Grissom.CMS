@@ -1,0 +1,1172 @@
+卷 BOOTCAMP 的文件夹 PATH 列表
+卷序列号为 000000BB E238:D40C
+C:.
+│  Grissom.CMS.sln
+│  tree.txt
+│  Web.config
+│  Web.Debug.config
+│  
+├─.vs
+│  ├─config
+│  │      applicationhost.config
+│  │      
+│  └─Grissom.CMS
+│      └─v14
+├─1-Model
+│  │  1-Model.csproj
+│  │  app.config
+│  │  BaseModel.cs
+│  │  packages.config
+│  │  
+│  ├─bin
+│  │  └─Debug
+│  │          Model.dll
+│  │          Model.dll.config
+│  │          Model.pdb
+│  │          MySql.Data.dll
+│  │          
+│  ├─common
+│  │      MsgModel.cs
+│  │      PK.cs
+│  │      
+│  ├─custom
+│  ├─Enum
+│  ├─generation
+│  │      EntityHelper.ttinclude
+│  │      Helper.ttinclude
+│  │      ModelTemplate.tt
+│  │      ModelTemplate1.cs
+│  │      SysMenu.cs
+│  │      SysMenuPoint.cs
+│  │      SysRole.cs
+│  │      SysRoleMenu.cs
+│  │      SysRoleMenuPoint.cs
+│  │      SysUser.cs
+│  │      SysUserRole.cs
+│  │      VideoComment.cs
+│  │      VideoCommentUpdown.cs
+│  │      VideoMain.cs
+│  │      VideoMark.cs
+│  │      
+│  ├─obj
+│  │  └─Debug
+│  │      │  1-Model.csproj.FileListAbsolute.txt
+│  │      │  1-Model.csprojResolveAssemblyReference.cache
+│  │      │  DesignTimeResolveAssemblyReferencesInput.cache
+│  │      │  Model.dll
+│  │      │  Model.pdb
+│  │      │  
+│  │      └─TempPE
+│  └─Properties
+│          AssemblyInfo.cs
+│          
+├─2-Services
+│  │  2-Services.csproj
+│  │  app.config
+│  │  BaseService.cs
+│  │  DbHelper.cs
+│  │  packages.config
+│  │  Trace.cs
+│  │  
+│  ├─bin
+│  │  └─Debug
+│  │          Easy.DataProxy.dll
+│  │          Easy.DataProxy.pdb
+│  │          Easy.Office.dll
+│  │          Easy.Office.pdb
+│  │          Easy.SqlConfiguration.dll
+│  │          Easy.SqlConfiguration.pdb
+│  │          FluentData.dll
+│  │          FluentData.pdb
+│  │          FluentData.xml
+│  │          ICSharpCode.SharpZipLib.dll
+│  │          ILogger.dll
+│  │          ILogger.pdb
+│  │          Model.dll
+│  │          Model.pdb
+│  │          MySql.Data.dll
+│  │          Newtonsoft.Json.dll
+│  │          Newtonsoft.Json.xml
+│  │          NPOI.dll
+│  │          NPOI.OOXML.dll
+│  │          NPOI.OpenXml4Net.dll
+│  │          NPOI.OpenXmlFormats.dll
+│  │          NPOI.xml
+│  │          Services.dll
+│  │          Services.dll.config
+│  │          Services.pdb
+│  │          
+│  ├─custom
+│  │  │  EntityHelper.ttinclude
+│  │  │  Helper.ttinclude
+│  │  │  ModelTemplate.tt
+│  │  │  ModelTemplate1.cs
+│  │  │  
+│  │  ├─Sys
+│  │  │      SysMenuPointService.cs
+│  │  │      SysMenuService.cs
+│  │  │      SysRoleMenuPointService.cs
+│  │  │      SysRoleMenuService.cs
+│  │  │      SysRoleService.cs
+│  │  │      SysUserRoleService.cs
+│  │  │      SysUserService.cs
+│  │  │      
+│  │  └─Video
+│  │          VideoCommentService.cs
+│  │          VideoCommentUpdownService.cs
+│  │          VideoMainService.cs
+│  │          VideoMarkService.cs
+│  │          
+│  ├─generation
+│  │      EntityHelper.ttinclude
+│  │      Helper.ttinclude
+│  │      ModelTemplate.tt
+│  │      ModelTemplate1.cs
+│  │      SysMenu.cs
+│  │      SysMenuPoint.cs
+│  │      SysRole.cs
+│  │      SysRoleMenu.cs
+│  │      SysRoleMenuPoint.cs
+│  │      SysUser.cs
+│  │      SysUserRole.cs
+│  │      VideoComment.cs
+│  │      VideoCommentUpdown.cs
+│  │      VideoMain.cs
+│  │      VideoMark.cs
+│  │      
+│  ├─obj
+│  │  └─Debug
+│  │      │  2-Services.csproj.FileListAbsolute.txt
+│  │      │  2-Services.csprojResolveAssemblyReference.cache
+│  │      │  DesignTimeResolveAssemblyReferencesInput.cache
+│  │      │  Services.dll
+│  │      │  Services.pdb
+│  │      │  TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+│  │      │  TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+│  │      │  TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+│  │      │  
+│  │      └─TempPE
+│  └─Properties
+│          AssemblyInfo.cs
+│          
+├─3-WebAPI
+│  │  3-WebApi.csproj
+│  │  Global.asax
+│  │  Global.asax.cs
+│  │  log4net.config
+│  │  packages.config
+│  │  Startup.cs
+│  │  Web.config
+│  │  Web.Debug.config
+│  │  Web.Release.config
+│  │  
+│  ├─AOP
+│  │      LogInterceptor.cs
+│  │      ProxyGenerationHook.cs
+│  │      
+│  ├─APIs
+│  │  ├─Sys
+│  │  │      RoleApiController.cs
+│  │  │      UserApiController.cs
+│  │  │      
+│  │  └─Video
+│  │          MainController.cs
+│  │          
+│  ├─App_Data
+│  │      inital.sql
+│  │      
+│  ├─App_Start
+│  │      FilterConfig.cs
+│  │      NamespaceHttpControllerSelector.cs
+│  │      Startup.Auth.cs
+│  │      WebApiConfig.cs
+│  │      
+│  ├─Auth
+│  │      CorsHandler.cs
+│  │      CustomJwtFormat.cs
+│  │      CustomOAuthProvider.cs
+│  │      
+│  ├─bin
+│  │  │  Antlr3.Runtime.dll
+│  │  │  Antlr3.Runtime.pdb
+│  │  │  Autofac.dll
+│  │  │  Autofac.Extras.DynamicProxy2.dll
+│  │  │  Autofac.Extras.DynamicProxy2.xml
+│  │  │  Autofac.Integration.WebApi.dll
+│  │  │  Autofac.Integration.WebApi.xml
+│  │  │  Autofac.xml
+│  │  │  Castle.Core.dll
+│  │  │  Castle.Core.xml
+│  │  │  Easy.DataProxy.dll
+│  │  │  Easy.DataProxy.pdb
+│  │  │  Easy.Office.dll
+│  │  │  Easy.Office.pdb
+│  │  │  Easy.SqlConfiguration.dll
+│  │  │  Easy.SqlConfiguration.pdb
+│  │  │  FluentData.dll
+│  │  │  FluentData.pdb
+│  │  │  FluentData.xml
+│  │  │  ICSharpCode.SharpZipLib.dll
+│  │  │  ILogger.dll
+│  │  │  ILogger.pdb
+│  │  │  log4net.config
+│  │  │  log4net.dll
+│  │  │  log4net.xml
+│  │  │  Log4netLogger.dll
+│  │  │  Log4netLogger.pdb
+│  │  │  Microsoft.AspNet.Identity.Core.dll
+│  │  │  Microsoft.AspNet.Identity.Core.xml
+│  │  │  Microsoft.AspNet.Identity.Owin.dll
+│  │  │  Microsoft.AspNet.Identity.Owin.xml
+│  │  │  Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+│  │  │  Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+│  │  │  Microsoft.IdentityModel.Logging.dll
+│  │  │  Microsoft.IdentityModel.Logging.xml
+│  │  │  Microsoft.IdentityModel.Tokens.dll
+│  │  │  Microsoft.IdentityModel.Tokens.xml
+│  │  │  Microsoft.Owin.Cors.dll
+│  │  │  Microsoft.Owin.Cors.xml
+│  │  │  Microsoft.Owin.dll
+│  │  │  Microsoft.Owin.Host.SystemWeb.dll
+│  │  │  Microsoft.Owin.Host.SystemWeb.xml
+│  │  │  Microsoft.Owin.Security.Cookies.dll
+│  │  │  Microsoft.Owin.Security.Cookies.xml
+│  │  │  Microsoft.Owin.Security.dll
+│  │  │  Microsoft.Owin.Security.Jwt.dll
+│  │  │  Microsoft.Owin.Security.Jwt.xml
+│  │  │  Microsoft.Owin.Security.OAuth.dll
+│  │  │  Microsoft.Owin.Security.OAuth.xml
+│  │  │  Microsoft.Owin.Security.xml
+│  │  │  Microsoft.Owin.xml
+│  │  │  Microsoft.Web.Infrastructure.dll
+│  │  │  Model.dll
+│  │  │  Model.pdb
+│  │  │  MySql.Data.dll
+│  │  │  Newtonsoft.Json.dll
+│  │  │  Newtonsoft.Json.xml
+│  │  │  NPOI.dll
+│  │  │  NPOI.OOXML.dll
+│  │  │  NPOI.OpenXml4Net.dll
+│  │  │  NPOI.OpenXmlFormats.dll
+│  │  │  NPOI.xml
+│  │  │  Owin.dll
+│  │  │  Services.dll
+│  │  │  Services.pdb
+│  │  │  System.IdentityModel.Tokens.Jwt.dll
+│  │  │  System.IdentityModel.Tokens.Jwt.pdb
+│  │  │  System.IdentityModel.Tokens.Jwt.xml
+│  │  │  System.Net.Http.Formatting.dll
+│  │  │  System.Net.Http.Formatting.xml
+│  │  │  System.Runtime.InteropServices.RuntimeInformation.dll
+│  │  │  System.Web.Cors.dll
+│  │  │  System.Web.Helpers.dll
+│  │  │  System.Web.Helpers.xml
+│  │  │  System.Web.Http.Cors.dll
+│  │  │  System.Web.Http.Cors.xml
+│  │  │  System.Web.Http.dll
+│  │  │  System.Web.Http.Owin.dll
+│  │  │  System.Web.Http.Owin.xml
+│  │  │  System.Web.Http.WebHost.dll
+│  │  │  System.Web.Http.WebHost.xml
+│  │  │  System.Web.Http.xml
+│  │  │  System.Web.Mvc.dll
+│  │  │  System.Web.Mvc.xml
+│  │  │  System.Web.Optimization.dll
+│  │  │  System.Web.Optimization.xml
+│  │  │  System.Web.Razor.dll
+│  │  │  System.Web.Razor.xml
+│  │  │  System.Web.WebPages.Deployment.dll
+│  │  │  System.Web.WebPages.Deployment.xml
+│  │  │  System.Web.WebPages.dll
+│  │  │  System.Web.WebPages.Razor.dll
+│  │  │  System.Web.WebPages.Razor.xml
+│  │  │  System.Web.WebPages.xml
+│  │  │  Thinktecture.IdentityModel.Core.dll
+│  │  │  Thinktecture.IdentityModel.Core.pdb
+│  │  │  WebApi.dll
+│  │  │  WebApi.dll.config
+│  │  │  WebApi.pdb
+│  │  │  WebGrease.dll
+│  │  │  
+│  │  ├─roslyn
+│  │  │      csc.exe
+│  │  │      Microsoft.Build.Tasks.CodeAnalysis.dll
+│  │  │      Microsoft.CodeAnalysis.CSharp.dll
+│  │  │      Microsoft.CodeAnalysis.dll
+│  │  │      Microsoft.CodeAnalysis.VisualBasic.dll
+│  │  │      Microsoft.CSharp.Core.targets
+│  │  │      Microsoft.VisualBasic.Core.targets
+│  │  │      System.Collections.Immutable.dll
+│  │  │      System.Reflection.Metadata.dll
+│  │  │      vbc.exe
+│  │  │      VBCSCompiler.exe
+│  │  │      VBCSCompiler.exe.config
+│  │  │      
+│  │  └─zh-Hans
+│  │          System.Net.Http.Formatting.resources.dll
+│  │          System.Web.Http.resources.dll
+│  │          System.Web.Http.WebHost.resources.dll
+│  │          
+│  ├─Helper
+│  │      AutoFacBootStrapper.cs
+│  │      BaseApiController.cs
+│  │      Commons.cs
+│  │      ConfigModel.cs
+│  │      DataProxyHelper.cs
+│  │      LogHelper.cs
+│  │      RequestHelper.cs
+│  │      XmlHelper.cs
+│  │      
+│  ├─HttpParamBindings
+│  │      DynamicWrapper.cs
+│  │      JObjectModelBinder.cs
+│  │      JObjectWrapper.cs
+│  │      NameValueCollectionWrapper.cs
+│  │      ProxyHelperForNVCWrapper.cs
+│  │      
+│  ├─Log
+│  │  ├─error
+│  │  │      20170123.log
+│  │  │      20170124.log
+│  │  │      
+│  │  ├─fatal
+│  │  │      20170123.log
+│  │  │      20170124.log
+│  │  │      
+│  │  ├─info
+│  │  │      20170123.log
+│  │  │      20170124.log
+│  │  │      
+│  │  └─warn
+│  │          20170123.log
+│  │          20170124.log
+│  │          
+│  ├─obj
+│  │  └─Debug
+│  │      │  3-WebApi.csproj.FileListAbsolute.txt
+│  │      │  3-WebApi.csprojResolveAssemblyReference.cache
+│  │      │  DesignTimeResolveAssemblyReferencesInput.cache
+│  │      │  TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+│  │      │  TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+│  │      │  TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+│  │      │  WebApi.dll
+│  │      │  WebApi.pdb
+│  │      │  
+│  │      └─TempPE
+│  ├─Properties
+│  │  │  AssemblyInfo.cs
+│  │  │  
+│  │  └─PublishProfiles
+│  └─SqlConfigs
+│          SysRole.xml
+│          SysUser.xml
+│          VideoMain.xml
+│          
+├─Core
+│  ├─Easy.DataProxy
+│  │  │  Easy.DataProxy.csproj
+│  │  │  packages.config
+│  │  │  
+│  │  ├─bin
+│  │  │  └─Debug
+│  │  │          Easy.DataProxy.dll
+│  │  │          Easy.DataProxy.pdb
+│  │  │          Easy.SqlConfiguration.dll
+│  │  │          Easy.SqlConfiguration.pdb
+│  │  │          Newtonsoft.Json.dll
+│  │  │          Newtonsoft.Json.xml
+│  │  │          
+│  │  ├─Builders
+│  │  │  ├─InsertUpdateDelete
+│  │  │  │      BuilderData.cs
+│  │  │  │      DbBuilder.cs
+│  │  │  │      IDbBuilder.cs
+│  │  │  │      
+│  │  │  └─Select
+│  │  │          ISelectBuilder.cs
+│  │  │          SelectBuilder.cs
+│  │  │          SelectBuilderData.cs
+│  │  │          
+│  │  ├─Commons
+│  │  │      DbField.cs
+│  │  │      Extension.cs
+│  │  │      LogicalKeyType.cs
+│  │  │      OperatorType.cs
+│  │  │      
+│  │  ├─obj
+│  │  │  └─Debug
+│  │  │      │  DesignTimeResolveAssemblyReferencesInput.cache
+│  │  │      │  Easy.DataProxy.csproj.FileListAbsolute.txt
+│  │  │      │  Easy.DataProxy.csprojResolveAssemblyReference.cache
+│  │  │      │  Easy.DataProxy.dll
+│  │  │      │  Easy.DataProxy.pdb
+│  │  │      │  
+│  │  │      └─TempPE
+│  │  ├─Properties
+│  │  │      AssemblyInfo.cs
+│  │  │      
+│  │  ├─Proxy
+│  │  │      Proxy.cs
+│  │  │      ProxyData.cs
+│  │  │      
+│  │  └─Strategies
+│  │      │  DbStrategy.cs
+│  │      │  IStrategy.cs
+│  │      │  SelectStrategy.cs
+│  │      │  StrategyData.cs
+│  │      │  
+│  │      ├─ConditionParser
+│  │      │      ICParser.cs
+│  │      │      SqlServerCParser.cs
+│  │      │      
+│  │      └─InsertUpdateDeleteParser
+│  │              Parser.cs
+│  │              ParserData.cs
+│  │              
+│  ├─Easy.Office
+│  │  │  Easy.Office.csproj
+│  │  │  packages.config
+│  │  │  
+│  │  ├─bin
+│  │  │  └─Debug
+│  │  │          Easy.Office.dll
+│  │  │          Easy.Office.pdb
+│  │  │          Easy.SqlConfiguration.dll
+│  │  │          Easy.SqlConfiguration.pdb
+│  │  │          ICSharpCode.SharpZipLib.dll
+│  │  │          NPOI.dll
+│  │  │          NPOI.OOXML.dll
+│  │  │          NPOI.OpenXml4Net.dll
+│  │  │          NPOI.OpenXmlFormats.dll
+│  │  │          NPOI.xml
+│  │  │          
+│  │  ├─Excel
+│  │  │      Excel.cs
+│  │  │      ImportRow.cs
+│  │  │      
+│  │  ├─obj
+│  │  │  └─Debug
+│  │  │      │  DesignTimeResolveAssemblyReferencesInput.cache
+│  │  │      │  Easy.Office.csproj.FileListAbsolute.txt
+│  │  │      │  Easy.Office.csprojResolveAssemblyReference.cache
+│  │  │      │  Easy.Office.dll
+│  │  │      │  Easy.Office.pdb
+│  │  │      │  
+│  │  │      └─TempPE
+│  │  └─Properties
+│  │          AssemblyInfo.cs
+│  │          
+│  ├─Easy.SqlConfig
+│  │  │  BillCodeRule.cs
+│  │  │  Delete.cs
+│  │  │  Dependency.cs
+│  │  │  Easy.SqlConfiguration.csproj
+│  │  │  Export.cs
+│  │  │  GroupBy.cs
+│  │  │  Import.cs
+│  │  │  Insert.cs
+│  │  │  IOperate.cs
+│  │  │  OrderBy.cs
+│  │  │  SingleQuery.cs
+│  │  │  SqlConfig.cs
+│  │  │  Update.cs
+│  │  │  Where.cs
+│  │  │  
+│  │  ├─bin
+│  │  │  └─Debug
+│  │  │          Easy.SqlConfiguration.dll
+│  │  │          Easy.SqlConfiguration.pdb
+│  │  │          
+│  │  ├─Field
+│  │  │      Field.cs
+│  │  │      ImportField.cs
+│  │  │      
+│  │  ├─obj
+│  │  │  └─Debug
+│  │  │      │  DesignTimeResolveAssemblyReferencesInput.cache
+│  │  │      │  Easy.SqlConfiguration.csproj.FileListAbsolute.txt
+│  │  │      │  Easy.SqlConfiguration.csprojResolveAssemblyReference.cache
+│  │  │      │  Easy.SqlConfiguration.dll
+│  │  │      │  Easy.SqlConfiguration.pdb
+│  │  │      │  
+│  │  │      └─TempPE
+│  │  └─Properties
+│  │          AssemblyInfo.cs
+│  │          
+│  └─Logger
+│      ├─ILogger
+│      │  │  Class1.cs
+│      │  │  ILogger.csproj
+│      │  │  ILogHandle.cs
+│      │  │  LogTypeEnum.cs
+│      │  │  
+│      │  ├─bin
+│      │  │  └─Debug
+│      │  │          ILogger.dll
+│      │  │          ILogger.pdb
+│      │  │          
+│      │  ├─obj
+│      │  │  └─Debug
+│      │  │      │  DesignTimeResolveAssemblyReferencesInput.cache
+│      │  │      │  ILogger.csproj.FileListAbsolute.txt
+│      │  │      │  ILogger.csprojResolveAssemblyReference.cache
+│      │  │      │  ILogger.dll
+│      │  │      │  ILogger.pdb
+│      │  │      │  TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+│      │  │      │  TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+│      │  │      │  TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+│      │  │      │  
+│      │  │      └─TempPE
+│      │  └─Properties
+│      │          AssemblyInfo.cs
+│      │          
+│      └─Log4netLogger
+│          │  Class1.cs
+│          │  Log4netLogger.csproj
+│          │  Log4netLogHandle.cs
+│          │  packages.config
+│          │  
+│          ├─bin
+│          │  └─Debug
+│          │          ILogger.dll
+│          │          ILogger.pdb
+│          │          log4net.dll
+│          │          log4net.xml
+│          │          Log4netLogger.dll
+│          │          Log4netLogger.pdb
+│          │          
+│          ├─obj
+│          │  └─Debug
+│          │      │  DesignTimeResolveAssemblyReferencesInput.cache
+│          │      │  Log4netLogger.csproj.FileListAbsolute.txt
+│          │      │  Log4netLogger.csprojResolveAssemblyReference.cache
+│          │      │  Log4netLogger.dll
+│          │      │  Log4netLogger.pdb
+│          │      │  TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+│          │      │  TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+│          │      │  TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+│          │      │  
+│          │      └─TempPE
+│          └─Properties
+│                  AssemblyInfo.cs
+│                  
+├─Libs
+│      FluentData.dll
+│      FluentData.pdb
+│      FluentData.XML
+│      
+└─packages
+    ├─Antlr.3.4.1.9004
+    │  │  Antlr.3.4.1.9004.nupkg
+    │  │  
+    │  └─lib
+    │          Antlr3.Runtime.dll
+    │          Antlr3.Runtime.pdb
+    │          
+    ├─Autofac.3.5.0
+    │  │  Autofac.3.5.0.nupkg
+    │  │  
+    │  └─lib
+    │      ├─net40
+    │      │      Autofac.dll
+    │      │      Autofac.xml
+    │      │      
+    │      └─portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1
+    │              Autofac.dll
+    │              Autofac.xml
+    │              
+    ├─Autofac.Extras.DynamicProxy2.3.0.7
+    │  │  Autofac.Extras.DynamicProxy2.3.0.7.nupkg
+    │  │  
+    │  └─lib
+    │      └─net40
+    │              Autofac.Extras.DynamicProxy2.dll
+    │              Autofac.Extras.DynamicProxy2.xml
+    │              
+    ├─Autofac.WebApi.3.1.0
+    │  │  Autofac.WebApi.3.1.0.nupkg
+    │  │  
+    │  └─lib
+    │      └─net40
+    │              Autofac.Integration.WebApi.dll
+    │              Autofac.Integration.WebApi.xml
+    │              
+    ├─Autofac.WebApi2.4.0.0
+    │  │  Autofac.WebApi2.4.0.0.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              Autofac.Integration.WebApi.dll
+    │              Autofac.Integration.WebApi.xml
+    │              
+    ├─Castle.Core.3.2.2
+    │  │  ASL - Apache Software Foundation License.txt
+    │  │  BreakingChanges.txt
+    │  │  Castle.Core.3.2.2.nupkg
+    │  │  Changes.txt
+    │  │  License.txt
+    │  │  readme.txt
+    │  │  
+    │  └─lib
+    │      ├─net35
+    │      │      Castle.Core.dll
+    │      │      Castle.Core.xml
+    │      │      
+    │      ├─net40-client
+    │      │      Castle.Core.dll
+    │      │      Castle.Core.xml
+    │      │      
+    │      ├─net45
+    │      │      Castle.Core.dll
+    │      │      Castle.Core.xml
+    │      │      
+    │      ├─sl4
+    │      │      Castle.Core.dll
+    │      │      Castle.Core.xml
+    │      │      
+    │      └─sl5
+    │              Castle.Core.dll
+    │              Castle.Core.xml
+    │              
+    ├─log4net.2.0.7
+    │  │  log4net.2.0.7.nupkg
+    │  │  
+    │  └─lib
+    │      ├─net20-full
+    │      │      log4net.dll
+    │      │      log4net.xml
+    │      │      
+    │      ├─net35-client
+    │      │      log4net.dll
+    │      │      log4net.xml
+    │      │      
+    │      ├─net35-full
+    │      │      log4net.dll
+    │      │      log4net.xml
+    │      │      
+    │      ├─net40-client
+    │      │      log4net.dll
+    │      │      log4net.xml
+    │      │      
+    │      ├─net40-full
+    │      │      log4net.dll
+    │      │      log4net.xml
+    │      │      
+    │      ├─net45-full
+    │      │      log4net.dll
+    │      │      log4net.xml
+    │      │      
+    │      └─netstandard1.3
+    │              log4net.dll
+    │              
+    ├─Microsoft.AspNet.Cors.5.2.3
+    │  │  Microsoft.AspNet.Cors.5.2.3.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              System.Web.Cors.dll
+    │              
+    ├─Microsoft.AspNet.Identity.Core.2.2.1
+    │  │  Microsoft.AspNet.Identity.Core.2.2.1.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              Microsoft.AspNet.Identity.Core.dll
+    │              Microsoft.AspNet.Identity.Core.xml
+    │              
+    ├─Microsoft.AspNet.Identity.Owin.2.2.1
+    │  │  Microsoft.AspNet.Identity.Owin.2.2.1.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              Microsoft.AspNet.Identity.Owin.dll
+    │              Microsoft.AspNet.Identity.Owin.xml
+    │              
+    ├─Microsoft.AspNet.Mvc.5.2.3
+    │  │  Microsoft.AspNet.Mvc.5.2.3.nupkg
+    │  │  
+    │  ├─Content
+    │  │      Web.config.install.xdt
+    │  │      Web.config.uninstall.xdt
+    │  │      
+    │  └─lib
+    │      └─net45
+    │              System.Web.Mvc.dll
+    │              System.Web.Mvc.xml
+    │              
+    ├─Microsoft.AspNet.Razor.3.2.3
+    │  │  Microsoft.AspNet.Razor.3.2.3.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              System.Web.Razor.dll
+    │              System.Web.Razor.xml
+    │              
+    ├─Microsoft.AspNet.Web.Optimization.1.1.3
+    │  │  Microsoft.AspNet.Web.Optimization.1.1.3.nupkg
+    │  │  
+    │  └─lib
+    │      └─net40
+    │              System.Web.Optimization.dll
+    │              system.web.optimization.xml
+    │              
+    ├─Microsoft.AspNet.WebApi.5.2.3
+    │      Microsoft.AspNet.WebApi.5.2.3.nupkg
+    │      
+    ├─Microsoft.AspNet.WebApi.Client.5.2.3
+    │  │  Microsoft.AspNet.WebApi.Client.5.2.3.nupkg
+    │  │  
+    │  └─lib
+    │      ├─net45
+    │      │  │  System.Net.Http.Formatting.dll
+    │      │  │  System.Net.Http.Formatting.xml
+    │      │  │  
+    │      │  └─zh-Hans
+    │      │          System.Net.Http.Formatting.resources.dll
+    │      │          System.Net.Http.Formatting.xml
+    │      │          
+    │      └─portable-wp8+netcore45+net45+wp81+wpa81
+    │              System.Net.Http.Formatting.dll
+    │              System.Net.Http.Formatting.xml
+    │              
+    ├─Microsoft.AspNet.WebApi.Client.zh-Hans.5.2.3
+    │  │  Microsoft.AspNet.WebApi.Client.zh-Hans.5.2.3.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │          └─zh-Hans
+    │                  System.Net.Http.Formatting.resources.dll
+    │                  System.Net.Http.Formatting.xml
+    │                  
+    ├─Microsoft.AspNet.WebApi.Core.5.2.3
+    │  │  Microsoft.AspNet.WebApi.Core.5.2.3.nupkg
+    │  │  
+    │  ├─Content
+    │  │      web.config.transform
+    │  │      
+    │  └─lib
+    │      └─net45
+    │          │  System.Web.Http.dll
+    │          │  System.Web.Http.xml
+    │          │  
+    │          └─zh-Hans
+    │                  System.Web.Http.resources.dll
+    │                  System.Web.Http.xml
+    │                  
+    ├─Microsoft.AspNet.WebApi.Core.zh-Hans.5.2.3
+    │  │  Microsoft.AspNet.WebApi.Core.zh-Hans.5.2.3.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │          └─zh-Hans
+    │                  System.Web.Http.resources.dll
+    │                  System.Web.Http.xml
+    │                  
+    ├─Microsoft.AspNet.WebApi.Cors.5.2.3
+    │  │  Microsoft.AspNet.WebApi.Cors.5.2.3.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              System.Web.Http.Cors.dll
+    │              System.Web.Http.Cors.xml
+    │              
+    ├─Microsoft.AspNet.WebApi.Owin.5.2.3
+    │  │  Microsoft.AspNet.WebApi.Owin.5.2.3.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              System.Web.Http.Owin.dll
+    │              System.Web.Http.Owin.xml
+    │              
+    ├─Microsoft.AspNet.WebApi.SelfHost.5.2.3
+    │  │  Microsoft.AspNet.WebApi.SelfHost.5.2.3.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              System.Web.Http.SelfHost.dll
+    │              System.Web.Http.SelfHost.xml
+    │              
+    ├─Microsoft.AspNet.WebApi.WebHost.5.2.3
+    │  │  Microsoft.AspNet.WebApi.WebHost.5.2.3.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │          │  System.Web.Http.WebHost.dll
+    │          │  System.Web.Http.WebHost.xml
+    │          │  
+    │          └─zh-Hans
+    │                  System.Web.Http.WebHost.resources.dll
+    │                  System.Web.Http.WebHost.xml
+    │                  
+    ├─Microsoft.AspNet.WebApi.WebHost.zh-Hans.5.2.3
+    │  │  Microsoft.AspNet.WebApi.WebHost.zh-Hans.5.2.3.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │          └─zh-Hans
+    │                  System.Web.Http.WebHost.resources.dll
+    │                  System.Web.Http.WebHost.xml
+    │                  
+    ├─Microsoft.AspNet.WebPages.3.2.3
+    │  │  Microsoft.AspNet.WebPages.3.2.3.nupkg
+    │  │  
+    │  ├─Content
+    │  │      Web.config.install.xdt
+    │  │      Web.config.uninstall.xdt
+    │  │      
+    │  └─lib
+    │      └─net45
+    │              System.Web.Helpers.dll
+    │              System.Web.Helpers.xml
+    │              System.Web.WebPages.Deployment.dll
+    │              System.Web.WebPages.Deployment.xml
+    │              System.Web.WebPages.dll
+    │              System.Web.WebPages.Razor.dll
+    │              System.Web.WebPages.Razor.xml
+    │              System.Web.WebPages.xml
+    │              
+    ├─Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0
+    │  │  Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0.nupkg
+    │  │  
+    │  ├─build
+    │  │      Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props
+    │  │      
+    │  ├─content
+    │  │      web.config.install.xdt
+    │  │      web.config.uninstall.xdt
+    │  │      
+    │  ├─lib
+    │  │  └─net45
+    │  │          Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+    │  │          Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+    │  │          
+    │  └─tools
+    │          init.ps1
+    │          uninstall.ps1
+    │          
+    ├─Microsoft.IdentityModel.Logging.1.0.0
+    │  │  Microsoft.IdentityModel.Logging.1.0.0.nupkg
+    │  │  
+    │  └─lib
+    │      ├─net451
+    │      │      Microsoft.IdentityModel.Logging.dll
+    │      │      Microsoft.IdentityModel.Logging.xml
+    │      │      
+    │      └─netstandard1.4
+    │              Microsoft.IdentityModel.Logging.dll
+    │              Microsoft.IdentityModel.Logging.xml
+    │              
+    ├─Microsoft.IdentityModel.Tokens.5.0.0
+    │  │  Microsoft.IdentityModel.Tokens.5.0.0.nupkg
+    │  │  
+    │  └─lib
+    │      ├─net451
+    │      │      Microsoft.IdentityModel.Tokens.dll
+    │      │      Microsoft.IdentityModel.Tokens.xml
+    │      │      
+    │      └─netstandard1.4
+    │              Microsoft.IdentityModel.Tokens.dll
+    │              Microsoft.IdentityModel.Tokens.xml
+    │              
+    ├─Microsoft.Net.Compilers.1.0.0
+    │  │  Microsoft.Net.Compilers.1.0.0.nupkg
+    │  │  ThirdPartyNotices.rtf
+    │  │  
+    │  ├─build
+    │  │      Microsoft.Net.Compilers.props
+    │  │      
+    │  └─tools
+    │          csc.exe
+    │          Microsoft.Build.Tasks.CodeAnalysis.dll
+    │          Microsoft.CodeAnalysis.CSharp.dll
+    │          Microsoft.CodeAnalysis.dll
+    │          Microsoft.CodeAnalysis.VisualBasic.dll
+    │          Microsoft.CSharp.Core.targets
+    │          Microsoft.VisualBasic.Core.targets
+    │          System.Collections.Immutable.dll
+    │          System.Reflection.Metadata.dll
+    │          vbc.exe
+    │          VBCSCompiler.exe
+    │          VBCSCompiler.exe.config
+    │          
+    ├─Microsoft.Owin.3.0.1
+    │  │  Microsoft.Owin.3.0.1.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              Microsoft.Owin.dll
+    │              Microsoft.Owin.XML
+    │              
+    ├─Microsoft.Owin.Cors.3.0.1
+    │  │  Microsoft.Owin.Cors.3.0.1.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              Microsoft.Owin.Cors.dll
+    │              Microsoft.Owin.Cors.XML
+    │              
+    ├─Microsoft.Owin.Host.SystemWeb.3.0.1
+    │  │  Microsoft.Owin.Host.SystemWeb.3.0.1.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              Microsoft.Owin.Host.SystemWeb.dll
+    │              Microsoft.Owin.Host.SystemWeb.xml
+    │              
+    ├─Microsoft.Owin.Security.3.0.1
+    │  │  Microsoft.Owin.Security.3.0.1.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              Microsoft.Owin.Security.dll
+    │              Microsoft.Owin.Security.XML
+    │              
+    ├─Microsoft.Owin.Security.Cookies.2.1.0
+    │  │  Microsoft.Owin.Security.Cookies.2.1.0.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              Microsoft.Owin.Security.Cookies.dll
+    │              Microsoft.Owin.Security.Cookies.xml
+    │              
+    ├─Microsoft.Owin.Security.Jwt.3.0.1
+    │  │  Microsoft.Owin.Security.Jwt.3.0.1.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              Microsoft.Owin.Security.Jwt.dll
+    │              Microsoft.Owin.Security.Jwt.xml
+    │              
+    ├─Microsoft.Owin.Security.OAuth.3.0.1
+    │  │  Microsoft.Owin.Security.OAuth.3.0.1.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              Microsoft.Owin.Security.OAuth.dll
+    │              Microsoft.Owin.Security.OAuth.XML
+    │              
+    ├─Microsoft.Web.Infrastructure.1.0.0.0
+    │  │  Microsoft.Web.Infrastructure.1.0.0.0.nupkg
+    │  │  
+    │  └─lib
+    │      └─net40
+    │              Microsoft.Web.Infrastructure.dll
+    │              
+    ├─Modernizr.2.6.2
+    │  │  Modernizr.2.6.2.nupkg
+    │  │  
+    │  ├─Content
+    │  │  └─Scripts
+    │  │          modernizr-2.6.2.js
+    │  │          
+    │  └─Tools
+    │          common.ps1
+    │          install.ps1
+    │          uninstall.ps1
+    │          
+    ├─MySql.Data.6.9.9
+    │  │  CHANGES
+    │  │  MySql.Data.6.9.9.nupkg
+    │  │  Readme.txt
+    │  │  
+    │  ├─content
+    │  │      app.config.transform
+    │  │      web.config.transform
+    │  │      
+    │  └─lib
+    │      ├─net40
+    │      │      MySql.Data.dll
+    │      │      
+    │      └─net45
+    │              MySql.Data.dll
+    │              
+    ├─Newtonsoft.Json.9.0.1
+    │  │  Newtonsoft.Json.9.0.1.nupkg
+    │  │  
+    │  ├─lib
+    │  │  ├─net20
+    │  │  │      Newtonsoft.Json.dll
+    │  │  │      Newtonsoft.Json.xml
+    │  │  │      
+    │  │  ├─net35
+    │  │  │      Newtonsoft.Json.dll
+    │  │  │      Newtonsoft.Json.xml
+    │  │  │      
+    │  │  ├─net40
+    │  │  │      Newtonsoft.Json.dll
+    │  │  │      Newtonsoft.Json.xml
+    │  │  │      
+    │  │  ├─net45
+    │  │  │      Newtonsoft.Json.dll
+    │  │  │      Newtonsoft.Json.xml
+    │  │  │      
+    │  │  ├─netstandard1.0
+    │  │  │      Newtonsoft.Json.dll
+    │  │  │      Newtonsoft.Json.xml
+    │  │  │      
+    │  │  ├─portable-net40+sl5+wp80+win8+wpa81
+    │  │  │      Newtonsoft.Json.dll
+    │  │  │      Newtonsoft.Json.xml
+    │  │  │      
+    │  │  └─portable-net45+wp80+win8+wpa81
+    │  │          Newtonsoft.Json.dll
+    │  │          Newtonsoft.Json.xml
+    │  │          
+    │  └─tools
+    │          install.ps1
+    │          
+    ├─NPOI.2.2.1
+    │  │  LICENSE
+    │  │  NPOI.2.2.1.nupkg
+    │  │  Read Me.txt
+    │  │  Release Notes.txt
+    │  │  
+    │  ├─lib
+    │  │  ├─net20
+    │  │  │      NPOI.dll
+    │  │  │      NPOI.OOXML.dll
+    │  │  │      NPOI.OpenXml4Net.dll
+    │  │  │      NPOI.OpenXmlFormats.dll
+    │  │  │      NPOI.XML
+    │  │  │      
+    │  │  └─net40
+    │  │          NPOI.dll
+    │  │          NPOI.OOXML.dll
+    │  │          NPOI.OpenXml4Net.dll
+    │  │          NPOI.OpenXmlFormats.dll
+    │  │          NPOI.XML
+    │  │          
+    │  └─logo
+    │          120_120.jpg
+    │          240_240.png
+    │          32_32.jpg
+    │          60_60.jpg
+    │          
+    ├─Owin.1.0
+    │  │  Owin.1.0.nupkg
+    │  │  
+    │  └─lib
+    │      └─net40
+    │              Owin.dll
+    │              
+    ├─SharpZipLib.0.86.0
+    │  │  SharpZipLib.0.86.0.nupkg
+    │  │  
+    │  └─lib
+    │      ├─11
+    │      │      ICSharpCode.SharpZipLib.dll
+    │      │      
+    │      ├─20
+    │      │      ICSharpCode.SharpZipLib.dll
+    │      │      
+    │      ├─SL3
+    │      │      SharpZipLib.Silverlight3.dll
+    │      │      
+    │      └─SL4
+    │              SharpZipLib.Silverlight4.dll
+    │              
+    ├─System.IdentityModel.Tokens.Jwt.4.0.2.206221351
+    │  │  System.IdentityModel.Tokens.Jwt.4.0.2.206221351.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              System.IdentityModel.Tokens.Jwt.dll
+    │              System.IdentityModel.Tokens.Jwt.pdb
+    │              System.IdentityModel.Tokens.Jwt.Xml
+    │              
+    ├─System.Runtime.InteropServices.RuntimeInformation.4.0.0
+    │  │  dotnet_library_license.txt
+    │  │  System.Runtime.InteropServices.RuntimeInformation.4.0.0.nupkg
+    │  │  ThirdPartyNotices.txt
+    │  │  
+    │  ├─lib
+    │  │  ├─MonoAndroid10
+    │  │  │      _._
+    │  │  │      
+    │  │  ├─MonoTouch10
+    │  │  │      _._
+    │  │  │      
+    │  │  ├─net45
+    │  │  │      System.Runtime.InteropServices.RuntimeInformation.dll
+    │  │  │      
+    │  │  ├─win8
+    │  │  │      System.Runtime.InteropServices.RuntimeInformation.dll
+    │  │  │      
+    │  │  ├─wpa81
+    │  │  │      System.Runtime.InteropServices.RuntimeInformation.dll
+    │  │  │      
+    │  │  ├─xamarinios10
+    │  │  │      _._
+    │  │  │      
+    │  │  ├─xamarinmac20
+    │  │  │      _._
+    │  │  │      
+    │  │  ├─xamarintvos10
+    │  │  │      _._
+    │  │  │      
+    │  │  └─xamarinwatchos10
+    │  │          _._
+    │  │          
+    │  ├─ref
+    │  │  ├─MonoAndroid10
+    │  │  │      _._
+    │  │  │      
+    │  │  ├─MonoTouch10
+    │  │  │      _._
+    │  │  │      
+    │  │  ├─netstandard1.1
+    │  │  │      System.Runtime.InteropServices.RuntimeInformation.dll
+    │  │  │      
+    │  │  ├─xamarinios10
+    │  │  │      _._
+    │  │  │      
+    │  │  ├─xamarinmac20
+    │  │  │      _._
+    │  │  │      
+    │  │  ├─xamarintvos10
+    │  │  │      _._
+    │  │  │      
+    │  │  └─xamarinwatchos10
+    │  │          _._
+    │  │          
+    │  └─runtimes
+    │      ├─aot
+    │      │  └─lib
+    │      │      └─netcore50
+    │      │              System.Runtime.InteropServices.RuntimeInformation.dll
+    │      │              
+    │      ├─unix
+    │      │  └─lib
+    │      │      └─netstandard1.1
+    │      │              System.Runtime.InteropServices.RuntimeInformation.dll
+    │      │              
+    │      └─win
+    │          └─lib
+    │              ├─net45
+    │              │      System.Runtime.InteropServices.RuntimeInformation.dll
+    │              │      
+    │              ├─netcore50
+    │              │      System.Runtime.InteropServices.RuntimeInformation.dll
+    │              │      
+    │              └─netstandard1.1
+    │                      System.Runtime.InteropServices.RuntimeInformation.dll
+    │                      
+    ├─Thinktecture.IdentityModel.Core.1.4.0
+    │  │  Thinktecture.IdentityModel.Core.1.4.0.nupkg
+    │  │  
+    │  └─lib
+    │      └─net45
+    │              Thinktecture.IdentityModel.Core.dll
+    │              Thinktecture.IdentityModel.Core.pdb
+    │              
+    └─WebGrease.1.5.2
+        │  WebGrease.1.5.2.nupkg
+        │  
+        ├─lib
+        │      WebGrease.dll
+        │      
+        └─tools
+                install.ps1
+                uninstall.ps1
+                WG.exe
+                
