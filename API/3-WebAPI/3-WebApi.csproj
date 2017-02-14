@@ -222,6 +222,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\video.20170214.sql" />
     <Content Include="Global.asax" />
     <Content Include="SqlConfigs\SysMenu.xml" />
     <Content Include="SqlConfigs\SysRole.xml" />
@@ -283,9 +284,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\1-Model\1-Model.csproj">
       <Project>{4c3e417b-58c2-4daf-9106-187156203e4c}</Project>
