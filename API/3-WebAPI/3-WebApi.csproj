@@ -63,9 +63,17 @@
       <HintPath>..\packages\Castle.Core.3.2.2\lib\net45\Castle.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EasyJsonToSql, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyJsonToSql.1.1.0\lib\net45\EasyJsonToSql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FluentData, Version=3.0.5.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Ctauto\WebApi.Open.Member\src\Libs\FluentData.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
@@ -126,6 +134,22 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
@@ -294,23 +318,11 @@
       <Project>{280559f7-f0ef-4f40-8ef8-4e8d86b4e70b}</Project>
       <Name>2-Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Core\Easy.DataProxy\Easy.DataProxy.csproj">
-      <Project>{53fd5c32-b7d8-47e1-be37-e00b253b67eb}</Project>
-      <Name>Easy.DataProxy</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Core\Easy.Office\Easy.Office.csproj">
-      <Project>{28b83a53-1d0d-4371-b107-d4c19273a1a3}</Project>
-      <Name>Easy.Office</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Core\Easy.SqlConfig\Easy.SqlConfiguration.csproj">
-      <Project>{b98fa40f-e68d-4120-a7be-524d486300c1}</Project>
-      <Name>Easy.SqlConfiguration</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Core\Logger\ILogger\ILogger.csproj">
+    <ProjectReference Include="..\Logger\ILogger\ILogger.csproj">
       <Project>{7827eb2f-07d3-4a82-84b1-7858df5748f7}</Project>
       <Name>ILogger</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Core\Logger\Log4netLogger\Log4netLogger.csproj">
+    <ProjectReference Include="..\Logger\Log4netLogger\Log4netLogger.csproj">
       <Project>{132f2282-f486-4f82-b8ac-8922b87e2c24}</Project>
       <Name>Log4netLogger</Name>
     </ProjectReference>
@@ -334,12 +346,14 @@
           <DevelopmentServerPort>2717</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:2717/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:2717/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
           </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
-          <servers defaultServer="SelfHostServer">
+          <servers defaultServer="">
             <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:2717/" workingDir="" />
           </servers>
         </WebProjectProperties>

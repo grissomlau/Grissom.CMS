@@ -39,3 +39,7 @@
 /API/Core/Logger/Log4netLogger/obj
 /API/Core/Logger/Log4netLogger/bin
 /API/packages
+/API/Logger/ILogger/bin/Debug
+/API/Logger/ILogger/obj/Debug
+/API/Logger/Log4netLogger/bin/Debug
+/API/Logger/Log4netLogger/obj/Debug

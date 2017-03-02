@@ -6,9 +6,9 @@ using System.Text;
 using FluentData;
 using System.Data.SqlClient;
 using System.Data;
-using Easy.DataProxy;
-using Easy.Office;
-using Easy.SqlConfiguration;
+using EasyJsonToSql;
+
+
 
 namespace Services
 {

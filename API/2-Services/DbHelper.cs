@@ -1,6 +1,6 @@
-﻿using Easy.DataProxy;
-using Easy.Office;
-using Easy.SqlConfiguration;
+﻿using EasyJsonToSql;
+
+
 using FluentData;
 using Model;
 using System;

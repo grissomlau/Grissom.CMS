@@ -15,9 +15,7 @@ using System.Web.Configuration;
 using System.Web.Security;
 using System.Collections.Specialized;
 using Services;
-using Easy.SqlConfiguration;
-using Easy.Office;
-using Easy.DataProxy;
+using EasyJsonToSql;
 using Model;
 
 namespace WebApi

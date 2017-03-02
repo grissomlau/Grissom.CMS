@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Http.Controllers;
 using System.Collections.Specialized;
 using System.Threading.Tasks;
-using Easy.DataProxy;
+using EasyJsonToSql;
 
 namespace WebApi
 {

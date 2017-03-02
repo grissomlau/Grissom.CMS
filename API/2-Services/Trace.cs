@@ -1,4 +1,4 @@
-﻿using Easy.DataProxy;
+﻿using EasyJsonToSql;
 using System;
 using System.Collections.Generic;
 using System.Linq;

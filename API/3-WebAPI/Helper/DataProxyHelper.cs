@@ -1,5 +1,5 @@
-﻿using Easy.DataProxy;
-using Easy.SqlConfiguration;
+﻿using EasyJsonToSql;
+
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
