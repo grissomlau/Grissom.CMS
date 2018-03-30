@@ -33,13 +33,12 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EasyFluentData, Version=3.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyFluentData.1.0.1\lib\net40\EasyFluentData.dll</HintPath>
+    </Reference>
     <Reference Include="EasyJsonToSql, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\EasyJsonToSql.1.1.0\lib\net45\EasyJsonToSql.dll</HintPath>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="FluentData, Version=3.0.5.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Ctauto\WebApi.Open.Member\src\Libs\FluentData.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
@@ -162,6 +161,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelTemplate1.cs</LastGenOutput>
     </Content>
+    <Content Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
